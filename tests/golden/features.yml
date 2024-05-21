@@ -1,0 +1,1467 @@
+in_source: |-
+  > 'Cool mathmatics, result must be -210, check: '
+  > (((((87 - -43 -1000) * (23 / 11)) + (-512367126 % 3)) / (179 / 3)) - (6 * (9 / 4))) * (5 + (21 % 7))
+  > '. Ok! '
+
+  > '~~~ Now, its time to do some boolean stuff: '
+  a = 10
+  b = a / 3
+  b = b
+  > (a - b > 7) || !(+3 && 0)
+  > '. You see? Its 1!'
+
+  > '~~~ Lets ask the guru, which is better: '
+  py = 'python'
+  if py > 'c++':
+    > 'python. Yeah yeah!'
+  ;
+  if 'c++' >= py:
+    > 'c++. Hm... I should fix this.'
+  ;
+      
+  > '~~~ Testing blocks: '
+  nn = 3
+  aa = 666
+  while nn:
+    nn = nn - 1
+    bb = aa + 1
+    if 1:
+      cc = 's'
+    ;
+    > 'cant print cc here! '
+  ;
+  > 'cant print bb here! '
+  > 'aa = '
+  > aa
+in_stdin: |
+out_stdout: |
+  source LoC: 34
+  code instr: 344
+  code bytes: 1720
+  ============================================================
+  output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa = 666'
+  instr executed: 3166
+  ticks: 3459
+out_code: |-
+  ~~~~~ INSTRUCTIONS ~~~~~
+  address   hexcode        mnemonic
+  0         1200000000     LD #0
+  1         1400000124     ST 292
+  2         3400000000     CMP 0
+  3         3c0000000c     JE 12
+  4         1a00000001     ADD #1
+  5         1400000124     ST 292
+  6         1a00000000     ADD #0
+  7         1400000125     ST 293
+  8         1100000125     LD ~293
+  9         5000000000     OUT 0
+  10        1000000124     LD 292
+  11        3800000002     JMP 2
+  12        1200000007     LD #7
+  13        1400000124     ST 292
+  14        1200000015     LD #21
+  15        1400000125     ST 293
+  16        2800000124     MOD 292
+  17        1400000124     ST 292
+  18        1200000005     LD #5
+  19        1400000125     ST 293
+  20        1800000124     ADD 292
+  21        1400000124     ST 292
+  22        1200000004     LD #4
+  23        1400000125     ST 293
+  24        1200000009     LD #9
+  25        1400000126     ST 294
+  26        2400000125     DIV 293
+  27        1400000125     ST 293
+  28        1200000006     LD #6
+  29        1400000126     ST 294
+  30        2000000125     MUL 293
+  31        1400000125     ST 293
+  32        1200000003     LD #3
+  33        1400000126     ST 294
+  34        12000000b3     LD #179
+  35        1400000127     ST 295
+  36        2400000126     DIV 294
+  37        1400000126     ST 294
+  38        1200000003     LD #3
+  39        1400000127     ST 295
+  40        121e8a1a16     LD #512367126
+  41        1400000128     ST 296
+  42        22ffffffff     MUL #-1
+  43        1400000128     ST 296
+  44        2800000127     MOD 295
+  45        1400000127     ST 295
+  46        120000000b     LD #11
+  47        1400000128     ST 296
+  48        1200000017     LD #23
+  49        1400000129     ST 297
+  50        2400000128     DIV 296
+  51        1400000128     ST 296
+  52        12000003e8     LD #1000
+  53        1400000129     ST 297
+  54        120000002b     LD #43
+  55        140000012a     ST 298
+  56        22ffffffff     MUL #-1
+  57        140000012a     ST 298
+  58        1200000057     LD #87
+  59        140000012b     ST 299
+  60        1c0000012a     SUB 298
+  61        140000012a     ST 298
+  62        1c00000129     SUB 297
+  63        1400000129     ST 297
+  64        2000000128     MUL 296
+  65        1400000128     ST 296
+  66        1800000127     ADD 295
+  67        1400000127     ST 295
+  68        2400000126     DIV 294
+  69        1400000126     ST 294
+  70        1c00000125     SUB 293
+  71        1400000125     ST 293
+  72        2000000124     MUL 292
+  73        1400000124     ST 292
+  74        1000000124     LD 292
+  75        5400000000     OUTN 0
+  76        1200000000     LD #0
+  77        1400000124     ST 292
+  78        340000002e     CMP 46
+  79        3c00000058     JE 88
+  80        1a00000001     ADD #1
+  81        1400000124     ST 292
+  82        1a0000002e     ADD #46
+  83        1400000125     ST 293
+  84        1100000125     LD ~293
+  85        5000000000     OUT 0
+  86        1000000124     LD 292
+  87        380000004e     JMP 78
+  88        1200000000     LD #0
+  89        1400000124     ST 292
+  90        3400000035     CMP 53
+  91        3c00000064     JE 100
+  92        1a00000001     ADD #1
+  93        1400000124     ST 292
+  94        1a00000035     ADD #53
+  95        1400000125     ST 293
+  96        1100000125     LD ~293
+  97        5000000000     OUT 0
+  98        1000000124     LD 292
+  99        380000005a     JMP 90
+  100       120000000a     LD #10
+  101       1400000124     ST 292
+  102       1000000124     LD 292
+  103       1400000124     ST 292
+  104       1200000003     LD #3
+  105       1400000125     ST 293
+  106       1000000124     LD 292
+  107       1400000126     ST 294
+  108       2400000125     DIV 293
+  109       1400000125     ST 293
+  110       1000000125     LD 293
+  111       1400000125     ST 293
+  112       1000000125     LD 293
+  113       1400000125     ST 293
+  114       1200000007     LD #7
+  115       1400000126     ST 294
+  116       1000000125     LD 293
+  117       1400000127     ST 295
+  118       1000000124     LD 292
+  119       1400000128     ST 296
+  120       1c00000127     SUB 295
+  121       1400000127     ST 295
+  122       3400000126     CMP 294
+  123       480000007e     JG 126
+  124       1200000000     LD #0
+  125       380000007f     JMP 127
+  126       1200000001     LD #1
+  127       1400000126     ST 294
+  128       1200000003     LD #3
+  129       1400000127     ST 295
+  130       1200000000     LD #0
+  131       1400000128     ST 296
+  132       3c00000089     JE 137
+  133       1000000127     LD 295
+  134       3c00000089     JE 137
+  135       1200000001     LD #1
+  136       380000008a     JMP 138
+  137       1200000000     LD #0
+  138       1400000127     ST 295
+  139       3c0000008e     JE 142
+  140       1200000000     LD #0
+  141       380000008f     JMP 143
+  142       1200000001     LD #1
+  143       1400000127     ST 295
+  144       4000000095     JNE 149
+  145       1000000126     LD 294
+  146       4000000095     JNE 149
+  147       1200000000     LD #0
+  148       3800000096     JMP 150
+  149       1200000001     LD #1
+  150       1400000126     ST 294
+  151       1000000126     LD 294
+  152       5400000000     OUTN 0
+  153       1200000000     LD #0
+  154       1400000126     ST 294
+  155       3400000062     CMP 98
+  156       3c000000a5     JE 165
+  157       1a00000001     ADD #1
+  158       1400000126     ST 294
+  159       1a00000062     ADD #98
+  160       1400000127     ST 295
+  161       1100000127     LD ~295
+  162       5000000000     OUT 0
+  163       1000000126     LD 294
+  164       380000009b     JMP 155
+  165       1200000000     LD #0
+  166       1400000126     ST 294
+  167       3400000074     CMP 116
+  168       3c000000b1     JE 177
+  169       1a00000001     ADD #1
+  170       1400000126     ST 294
+  171       1a00000074     ADD #116
+  172       1400000127     ST 295
+  173       1100000127     LD ~295
+  174       5000000000     OUT 0
+  175       1000000126     LD 294
+  176       38000000a7     JMP 167
+  177       1200000000     LD #0
+  178       1400000126     ST 294
+  179       340000009d     CMP 157
+  180       3c000000c2     JE 194
+  181       1a00000001     ADD #1
+  182       1400000126     ST 294
+  183       1a0000009d     ADD #157
+  184       1400000166     ST 358
+  185       1100000166     LD ~358
+  186       1400000166     ST 358
+  187       1200000126     LD #294
+  188       1800000126     ADD 294
+  189       1400000167     ST 359
+  190       1000000166     LD 358
+  191       1500000167     ST ~359
+  192       1000000126     LD 294
+  193       38000000b3     JMP 179
+  194       1200000003     LD #3
+  195       1400000166     ST 358
+  196       1000000126     LD 294
+  197       1400000167     ST 359
+  198       3400000166     CMP 358
+  199       48000000ca     JG 202
+  200       1200000000     LD #0
+  201       38000000cb     JMP 203
+  202       1200000001     LD #1
+  203       1400000166     ST 358
+  204       3600000000     CMP #0
+  205       3c000000da     JE 218
+  206       1200000000     LD #0
+  207       1400000166     ST 358
+  208       34000000a8     CMP 168
+  209       3c000000da     JE 218
+  210       1a00000001     ADD #1
+  211       1400000166     ST 358
+  212       1a000000a8     ADD #168
+  213       1400000167     ST 359
+  214       1100000167     LD ~359
+  215       5000000000     OUT 0
+  216       1000000166     LD 358
+  217       38000000d0     JMP 208
+  218       1000000126     LD 294
+  219       1400000166     ST 358
+  220       1200000003     LD #3
+  221       1400000167     ST 359
+  222       3400000166     CMP 358
+  223       48000000e3     JG 227
+  224       3c000000e3     JE 227
+  225       1200000000     LD #0
+  226       38000000e4     JMP 228
+  227       1200000001     LD #1
+  228       1400000166     ST 358
+  229       3600000000     CMP #0
+  230       3c000000f3     JE 243
+  231       1200000000     LD #0
+  232       1400000166     ST 358
+  233       34000000bf     CMP 191
+  234       3c000000f3     JE 243
+  235       1a00000001     ADD #1
+  236       1400000166     ST 358
+  237       1a000000bf     ADD #191
+  238       1400000167     ST 359
+  239       1100000167     LD ~359
+  240       5000000000     OUT 0
+  241       1000000166     LD 358
+  242       38000000e9     JMP 233
+  243       1200000000     LD #0
+  244       1400000166     ST 358
+  245       34000000dd     CMP 221
+  246       3c000000ff     JE 255
+  247       1a00000001     ADD #1
+  248       1400000166     ST 358
+  249       1a000000dd     ADD #221
+  250       1400000167     ST 359
+  251       1100000167     LD ~359
+  252       5000000000     OUT 0
+  253       1000000166     LD 358
+  254       38000000f5     JMP 245
+  255       1200000003     LD #3
+  256       1400000166     ST 358
+  257       1000000166     LD 358
+  258       1400000166     ST 358
+  259       120000029a     LD #666
+  260       1400000167     ST 359
+  261       1000000167     LD 359
+  262       1400000167     ST 359
+  263       1000000166     LD 358
+  264       1400000168     ST 360
+  265       3600000000     CMP #0
+  266       3c0000013d     JE 317
+  267       1200000001     LD #1
+  268       1400000168     ST 360
+  269       1000000166     LD 358
+  270       1400000169     ST 361
+  271       1c00000168     SUB 360
+  272       1400000168     ST 360
+  273       1000000168     LD 360
+  274       1400000166     ST 358
+  275       1200000001     LD #1
+  276       1400000168     ST 360
+  277       1000000167     LD 359
+  278       1400000169     ST 361
+  279       1800000168     ADD 360
+  280       1400000168     ST 360
+  281       1000000168     LD 360
+  282       1400000168     ST 360
+  283       1200000001     LD #1
+  284       1400000169     ST 361
+  285       3600000000     CMP #0
+  286       3c00000130     JE 304
+  287       1200000000     LD #0
+  288       1400000169     ST 361
+  289       34000000f2     CMP 242
+  290       3c00000130     JE 304
+  291       1a00000001     ADD #1
+  292       1400000169     ST 361
+  293       1a000000f2     ADD #242
+  294       14000001a9     ST 425
+  295       11000001a9     LD ~425
+  296       14000001a9     ST 425
+  297       1200000169     LD #361
+  298       1800000169     ADD 361
+  299       14000001aa     ST 426
+  300       10000001a9     LD 425
+  301       15000001aa     ST ~426
+  302       1000000169     LD 361
+  303       3800000121     JMP 289
+  304       1200000000     LD #0
+  305       14000001a9     ST 425
+  306       34000000f4     CMP 244
+  307       3c0000013c     JE 316
+  308       1a00000001     ADD #1
+  309       14000001a9     ST 425
+  310       1a000000f4     ADD #244
+  311       14000001aa     ST 426
+  312       11000001aa     LD ~426
+  313       5000000000     OUT 0
+  314       10000001a9     LD 425
+  315       3800000132     JMP 306
+  316       3800000107     JMP 263
+  317       1200000000     LD #0
+  318       14000001a9     ST 425
+  319       3400000109     CMP 265
+  320       3c00000149     JE 329
+  321       1a00000001     ADD #1
+  322       14000001a9     ST 425
+  323       1a00000109     ADD #265
+  324       14000001aa     ST 426
+  325       11000001aa     LD ~426
+  326       5000000000     OUT 0
+  327       10000001a9     LD 425
+  328       380000013f     JMP 319
+  329       1200000000     LD #0
+  330       14000001a9     ST 425
+  331       340000011e     CMP 286
+  332       3c00000155     JE 341
+  333       1a00000001     ADD #1
+  334       14000001a9     ST 425
+  335       1a0000011e     ADD #286
+  336       14000001aa     ST 426
+  337       11000001aa     LD ~426
+  338       5000000000     OUT 0
+  339       10000001a9     LD 425
+  340       380000014b     JMP 331
+  341       1000000167     LD 359
+  342       5400000000     OUTN 0
+  343       0400000000     HLT
+  ~~~~~ MEMORY ~~~~~
+  address   int
+  0         45
+  1         67
+  2         111
+  3         111
+  4         108
+  5         32
+  6         109
+  7         97
+  8         116
+  9         104
+  10        109
+  11        97
+  12        116
+  13        105
+  14        99
+  15        115
+  16        44
+  17        32
+  18        114
+  19        101
+  20        115
+  21        117
+  22        108
+  23        116
+  24        32
+  25        109
+  26        117
+  27        115
+  28        116
+  29        32
+  30        98
+  31        101
+  32        32
+  33        45
+  34        50
+  35        49
+  36        48
+  37        44
+  38        32
+  39        99
+  40        104
+  41        101
+  42        99
+  43        107
+  44        58
+  45        32
+  46        6
+  47        46
+  48        32
+  49        79
+  50        107
+  51        33
+  52        32
+  53        44
+  54        126
+  55        126
+  56        126
+  57        32
+  58        78
+  59        111
+  60        119
+  61        44
+  62        32
+  63        105
+  64        116
+  65        115
+  66        32
+  67        116
+  68        105
+  69        109
+  70        101
+  71        32
+  72        116
+  73        111
+  74        32
+  75        100
+  76        111
+  77        32
+  78        115
+  79        111
+  80        109
+  81        101
+  82        32
+  83        98
+  84        111
+  85        111
+  86        108
+  87        101
+  88        97
+  89        110
+  90        32
+  91        115
+  92        116
+  93        117
+  94        102
+  95        102
+  96        58
+  97        32
+  98        17
+  99        46
+  100       32
+  101       89
+  102       111
+  103       117
+  104       32
+  105       115
+  106       101
+  107       101
+  108       63
+  109       32
+  110       73
+  111       116
+  112       115
+  113       32
+  114       49
+  115       33
+  116       40
+  117       126
+  118       126
+  119       126
+  120       32
+  121       76
+  122       101
+  123       116
+  124       115
+  125       32
+  126       97
+  127       115
+  128       107
+  129       32
+  130       116
+  131       104
+  132       101
+  133       32
+  134       103
+  135       117
+  136       114
+  137       117
+  138       44
+  139       32
+  140       119
+  141       104
+  142       105
+  143       99
+  144       104
+  145       32
+  146       105
+  147       115
+  148       32
+  149       98
+  150       101
+  151       116
+  152       116
+  153       101
+  154       114
+  155       58
+  156       32
+  157       6
+  158       112
+  159       121
+  160       116
+  161       104
+  162       111
+  163       110
+  164       3
+  165       99
+  166       43
+  167       43
+  168       18
+  169       112
+  170       121
+  171       116
+  172       104
+  173       111
+  174       110
+  175       46
+  176       32
+  177       89
+  178       101
+  179       97
+  180       104
+  181       32
+  182       121
+  183       101
+  184       97
+  185       104
+  186       33
+  187       3
+  188       99
+  189       43
+  190       43
+  191       29
+  192       99
+  193       43
+  194       43
+  195       46
+  196       32
+  197       72
+  198       109
+  199       46
+  200       46
+  201       46
+  202       32
+  203       73
+  204       32
+  205       115
+  206       104
+  207       111
+  208       117
+  209       108
+  210       100
+  211       32
+  212       102
+  213       105
+  214       120
+  215       32
+  216       116
+  217       104
+  218       105
+  219       115
+  220       46
+  221       20
+  222       126
+  223       126
+  224       126
+  225       32
+  226       84
+  227       101
+  228       115
+  229       116
+  230       105
+  231       110
+  232       103
+  233       32
+  234       98
+  235       108
+  236       111
+  237       99
+  238       107
+  239       115
+  240       58
+  241       32
+  242       1
+  243       115
+  244       20
+  245       99
+  246       97
+  247       110
+  248       116
+  249       32
+  250       112
+  251       114
+  252       105
+  253       110
+  254       116
+  255       32
+  256       99
+  257       99
+  258       32
+  259       104
+  260       101
+  261       114
+  262       101
+  263       33
+  264       32
+  265       20
+  266       99
+  267       97
+  268       110
+  269       116
+  270       32
+  271       112
+  272       114
+  273       105
+  274       110
+  275       116
+  276       32
+  277       98
+  278       98
+  279       32
+  280       104
+  281       101
+  282       114
+  283       101
+  284       33
+  285       32
+  286       5
+  287       97
+  288       97
+  289       32
+  290       61
+  291       32
+out_log: |
+  DEBUG   machine:simulation    TICK:     0 IP:     0 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 LD #0
+  DEBUG   machine:simulation    TICK:     1 IP:     1 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ST 292
+  DEBUG   machine:simulation    TICK:     2 IP:     2 ADDR:   292 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 CMP 0
+  DEBUG   machine:simulation    TICK:     3 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -45 ACC:     0 JE 12
+  DEBUG   machine:simulation    TICK:     4 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -45 ACC:     0 ADD #1
+  DEBUG   machine:simulation    TICK:     5 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     1 ACC:     1 ST 292
+  DEBUG   machine:simulation    TICK:     6 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     1 ACC:     1 ADD #0
+  DEBUG   machine:simulation    TICK:     7 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     1 ACC:     1 ST 293
+  DEBUG   machine:simulation    TICK:     8 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     1 ACC:     1 LD ~293
+  DEBUG   machine:simulation    TICK:    10 IP:     9 ADDR:     1 MEM_OUT:    67 ALU_OUT:    67 ACC:    67 OUT 0
+  DEBUG   machine:signal_output output: '' << 'C'
+  DEBUG   machine:simulation    TICK:    11 IP:    10 ADDR:     1 MEM_OUT:    67 ALU_OUT:    67 ACC:    67 LD 292
+  DEBUG   machine:simulation    TICK:    12 IP:    11 ADDR:   292 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 JMP 2
+  DEBUG   machine:simulation    TICK:    13 IP:     2 ADDR:   292 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP 0
+  DEBUG   machine:simulation    TICK:    14 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -44 ACC:     1 JE 12
+  DEBUG   machine:simulation    TICK:    15 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -44 ACC:     1 ADD #1
+  DEBUG   machine:simulation    TICK:    16 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     2 ACC:     2 ST 292
+  DEBUG   machine:simulation    TICK:    17 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     2 ACC:     2 ADD #0
+  DEBUG   machine:simulation    TICK:    18 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     2 ACC:     2 ST 293
+  DEBUG   machine:simulation    TICK:    19 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     2 ACC:     2 LD ~293
+  DEBUG   machine:simulation    TICK:    21 IP:     9 ADDR:     2 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 OUT 0
+  DEBUG   machine:signal_output output: 'C' << 'o'
+  DEBUG   machine:simulation    TICK:    22 IP:    10 ADDR:     2 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 LD 292
+  DEBUG   machine:simulation    TICK:    23 IP:    11 ADDR:   292 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 JMP 2
+  DEBUG   machine:simulation    TICK:    24 IP:     2 ADDR:   292 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP 0
+  DEBUG   machine:simulation    TICK:    25 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -43 ACC:     2 JE 12
+  DEBUG   machine:simulation    TICK:    26 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -43 ACC:     2 ADD #1
+  DEBUG   machine:simulation    TICK:    27 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     3 ACC:     3 ST 292
+  DEBUG   machine:simulation    TICK:    28 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     3 ACC:     3 ADD #0
+  DEBUG   machine:simulation    TICK:    29 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     3 ACC:     3 ST 293
+  DEBUG   machine:simulation    TICK:    30 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     3 ACC:     3 LD ~293
+  DEBUG   machine:simulation    TICK:    32 IP:     9 ADDR:     3 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 OUT 0
+  DEBUG   machine:signal_output output: 'Co' << 'o'
+  DEBUG   machine:simulation    TICK:    33 IP:    10 ADDR:     3 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 LD 292
+  DEBUG   machine:simulation    TICK:    34 IP:    11 ADDR:   292 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 JMP 2
+  DEBUG   machine:simulation    TICK:    35 IP:     2 ADDR:   292 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP 0
+  DEBUG   machine:simulation    TICK:    36 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -42 ACC:     3 JE 12
+  DEBUG   machine:simulation    TICK:    37 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -42 ACC:     3 ADD #1
+  DEBUG   machine:simulation    TICK:    38 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     4 ACC:     4 ST 292
+  DEBUG   machine:simulation    TICK:    39 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     4 ACC:     4 ADD #0
+  DEBUG   machine:simulation    TICK:    40 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     4 ACC:     4 ST 293
+  DEBUG   machine:simulation    TICK:    41 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     4 ACC:     4 LD ~293
+  DEBUG   machine:simulation    TICK:    43 IP:     9 ADDR:     4 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 OUT 0
+  DEBUG   machine:signal_output output: 'Coo' << 'l'
+  DEBUG   machine:simulation    TICK:    44 IP:    10 ADDR:     4 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 LD 292
+  DEBUG   machine:simulation    TICK:    45 IP:    11 ADDR:   292 MEM_OUT:     4 ALU_OUT:     4 ACC:     4 JMP 2
+  DEBUG   machine:simulation    TICK:    46 IP:     2 ADDR:   292 MEM_OUT:     4 ALU_OUT:     4 ACC:     4 CMP 0
+  DEBUG   machine:simulation    TICK:    47 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -41 ACC:     4 JE 12
+  DEBUG   machine:simulation    TICK:    48 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -41 ACC:     4 ADD #1
+  DEBUG   machine:simulation    TICK:    49 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     5 ACC:     5 ST 292
+  DEBUG   machine:simulation    TICK:    50 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     5 ACC:     5 ADD #0
+  DEBUG   machine:simulation    TICK:    51 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     5 ACC:     5 ST 293
+  DEBUG   machine:simulation    TICK:    52 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     5 ACC:     5 LD ~293
+  DEBUG   machine:simulation    TICK:    54 IP:     9 ADDR:     5 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool' << ' '
+  DEBUG   machine:simulation    TICK:    55 IP:    10 ADDR:     5 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:    56 IP:    11 ADDR:   292 MEM_OUT:     5 ALU_OUT:     5 ACC:     5 JMP 2
+  DEBUG   machine:simulation    TICK:    57 IP:     2 ADDR:   292 MEM_OUT:     5 ALU_OUT:     5 ACC:     5 CMP 0
+  DEBUG   machine:simulation    TICK:    58 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -40 ACC:     5 JE 12
+  DEBUG   machine:simulation    TICK:    59 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -40 ACC:     5 ADD #1
+  DEBUG   machine:simulation    TICK:    60 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     6 ACC:     6 ST 292
+  DEBUG   machine:simulation    TICK:    61 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     6 ACC:     6 ADD #0
+  DEBUG   machine:simulation    TICK:    62 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     6 ACC:     6 ST 293
+  DEBUG   machine:simulation    TICK:    63 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     6 ACC:     6 LD ~293
+  DEBUG   machine:simulation    TICK:    65 IP:     9 ADDR:     6 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 OUT 0
+  DEBUG   machine:signal_output output: 'Cool ' << 'm'
+  DEBUG   machine:simulation    TICK:    66 IP:    10 ADDR:     6 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 LD 292
+  DEBUG   machine:simulation    TICK:    67 IP:    11 ADDR:   292 MEM_OUT:     6 ALU_OUT:     6 ACC:     6 JMP 2
+  DEBUG   machine:simulation    TICK:    68 IP:     2 ADDR:   292 MEM_OUT:     6 ALU_OUT:     6 ACC:     6 CMP 0
+  DEBUG   machine:simulation    TICK:    69 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -39 ACC:     6 JE 12
+  DEBUG   machine:simulation    TICK:    70 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -39 ACC:     6 ADD #1
+  DEBUG   machine:simulation    TICK:    71 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 ST 292
+  DEBUG   machine:simulation    TICK:    72 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 ADD #0
+  DEBUG   machine:simulation    TICK:    73 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 ST 293
+  DEBUG   machine:simulation    TICK:    74 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 LD ~293
+  DEBUG   machine:simulation    TICK:    76 IP:     9 ADDR:     7 MEM_OUT:    97 ALU_OUT:    97 ACC:    97 OUT 0
+  DEBUG   machine:signal_output output: 'Cool m' << 'a'
+  DEBUG   machine:simulation    TICK:    77 IP:    10 ADDR:     7 MEM_OUT:    97 ALU_OUT:    97 ACC:    97 LD 292
+  DEBUG   machine:simulation    TICK:    78 IP:    11 ADDR:   292 MEM_OUT:     7 ALU_OUT:     7 ACC:     7 JMP 2
+  DEBUG   machine:simulation    TICK:    79 IP:     2 ADDR:   292 MEM_OUT:     7 ALU_OUT:     7 ACC:     7 CMP 0
+  DEBUG   machine:simulation    TICK:    80 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -38 ACC:     7 JE 12
+  DEBUG   machine:simulation    TICK:    81 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -38 ACC:     7 ADD #1
+  DEBUG   machine:simulation    TICK:    82 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     8 ACC:     8 ST 292
+  DEBUG   machine:simulation    TICK:    83 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     8 ACC:     8 ADD #0
+  DEBUG   machine:simulation    TICK:    84 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     8 ACC:     8 ST 293
+  DEBUG   machine:simulation    TICK:    85 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     8 ACC:     8 LD ~293
+  DEBUG   machine:simulation    TICK:    87 IP:     9 ADDR:     8 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 OUT 0
+  DEBUG   machine:signal_output output: 'Cool ma' << 't'
+  DEBUG   machine:simulation    TICK:    88 IP:    10 ADDR:     8 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 LD 292
+  DEBUG   machine:simulation    TICK:    89 IP:    11 ADDR:   292 MEM_OUT:     8 ALU_OUT:     8 ACC:     8 JMP 2
+  DEBUG   machine:simulation    TICK:    90 IP:     2 ADDR:   292 MEM_OUT:     8 ALU_OUT:     8 ACC:     8 CMP 0
+  DEBUG   machine:simulation    TICK:    91 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -37 ACC:     8 JE 12
+  DEBUG   machine:simulation    TICK:    92 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -37 ACC:     8 ADD #1
+  DEBUG   machine:simulation    TICK:    93 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:     9 ACC:     9 ST 292
+  DEBUG   machine:simulation    TICK:    94 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:     9 ACC:     9 ADD #0
+  DEBUG   machine:simulation    TICK:    95 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:     9 ACC:     9 ST 293
+  DEBUG   machine:simulation    TICK:    96 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:     9 ACC:     9 LD ~293
+  DEBUG   machine:simulation    TICK:    98 IP:     9 ADDR:     9 MEM_OUT:   104 ALU_OUT:   104 ACC:   104 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mat' << 'h'
+  DEBUG   machine:simulation    TICK:    99 IP:    10 ADDR:     9 MEM_OUT:   104 ALU_OUT:   104 ACC:   104 LD 292
+  DEBUG   machine:simulation    TICK:   100 IP:    11 ADDR:   292 MEM_OUT:     9 ALU_OUT:     9 ACC:     9 JMP 2
+  DEBUG   machine:simulation    TICK:   101 IP:     2 ADDR:   292 MEM_OUT:     9 ALU_OUT:     9 ACC:     9 CMP 0
+  DEBUG   machine:simulation    TICK:   102 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -36 ACC:     9 JE 12
+  DEBUG   machine:simulation    TICK:   103 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -36 ACC:     9 ADD #1
+  DEBUG   machine:simulation    TICK:   104 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    10 ACC:    10 ST 292
+  DEBUG   machine:simulation    TICK:   105 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    10 ACC:    10 ADD #0
+  DEBUG   machine:simulation    TICK:   106 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    10 ACC:    10 ST 293
+  DEBUG   machine:simulation    TICK:   107 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    10 ACC:    10 LD ~293
+  DEBUG   machine:simulation    TICK:   109 IP:     9 ADDR:    10 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 OUT 0
+  DEBUG   machine:signal_output output: 'Cool math' << 'm'
+  DEBUG   machine:simulation    TICK:   110 IP:    10 ADDR:    10 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 LD 292
+  DEBUG   machine:simulation    TICK:   111 IP:    11 ADDR:   292 MEM_OUT:    10 ALU_OUT:    10 ACC:    10 JMP 2
+  DEBUG   machine:simulation    TICK:   112 IP:     2 ADDR:   292 MEM_OUT:    10 ALU_OUT:    10 ACC:    10 CMP 0
+  DEBUG   machine:simulation    TICK:   113 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -35 ACC:    10 JE 12
+  DEBUG   machine:simulation    TICK:   114 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -35 ACC:    10 ADD #1
+  DEBUG   machine:simulation    TICK:   115 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    11 ACC:    11 ST 292
+  DEBUG   machine:simulation    TICK:   116 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    11 ACC:    11 ADD #0
+  DEBUG   machine:simulation    TICK:   117 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    11 ACC:    11 ST 293
+  DEBUG   machine:simulation    TICK:   118 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    11 ACC:    11 LD ~293
+  DEBUG   machine:simulation    TICK:   120 IP:     9 ADDR:    11 MEM_OUT:    97 ALU_OUT:    97 ACC:    97 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathm' << 'a'
+  DEBUG   machine:simulation    TICK:   121 IP:    10 ADDR:    11 MEM_OUT:    97 ALU_OUT:    97 ACC:    97 LD 292
+  DEBUG   machine:simulation    TICK:   122 IP:    11 ADDR:   292 MEM_OUT:    11 ALU_OUT:    11 ACC:    11 JMP 2
+  DEBUG   machine:simulation    TICK:   123 IP:     2 ADDR:   292 MEM_OUT:    11 ALU_OUT:    11 ACC:    11 CMP 0
+  DEBUG   machine:simulation    TICK:   124 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -34 ACC:    11 JE 12
+  DEBUG   machine:simulation    TICK:   125 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -34 ACC:    11 ADD #1
+  DEBUG   machine:simulation    TICK:   126 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    12 ACC:    12 ST 292
+  DEBUG   machine:simulation    TICK:   127 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    12 ACC:    12 ADD #0
+  DEBUG   machine:simulation    TICK:   128 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    12 ACC:    12 ST 293
+  DEBUG   machine:simulation    TICK:   129 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    12 ACC:    12 LD ~293
+  DEBUG   machine:simulation    TICK:   131 IP:     9 ADDR:    12 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathma' << 't'
+  DEBUG   machine:simulation    TICK:   132 IP:    10 ADDR:    12 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 LD 292
+  DEBUG   machine:simulation    TICK:   133 IP:    11 ADDR:   292 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 JMP 2
+  DEBUG   machine:simulation    TICK:   134 IP:     2 ADDR:   292 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 CMP 0
+  DEBUG   machine:simulation    TICK:   135 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -33 ACC:    12 JE 12
+  DEBUG   machine:simulation    TICK:   136 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -33 ACC:    12 ADD #1
+  DEBUG   machine:simulation    TICK:   137 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    13 ACC:    13 ST 292
+  DEBUG   machine:simulation    TICK:   138 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    13 ACC:    13 ADD #0
+  DEBUG   machine:simulation    TICK:   139 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    13 ACC:    13 ST 293
+  DEBUG   machine:simulation    TICK:   140 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    13 ACC:    13 LD ~293
+  DEBUG   machine:simulation    TICK:   142 IP:     9 ADDR:    13 MEM_OUT:   105 ALU_OUT:   105 ACC:   105 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmat' << 'i'
+  DEBUG   machine:simulation    TICK:   143 IP:    10 ADDR:    13 MEM_OUT:   105 ALU_OUT:   105 ACC:   105 LD 292
+  DEBUG   machine:simulation    TICK:   144 IP:    11 ADDR:   292 MEM_OUT:    13 ALU_OUT:    13 ACC:    13 JMP 2
+  DEBUG   machine:simulation    TICK:   145 IP:     2 ADDR:   292 MEM_OUT:    13 ALU_OUT:    13 ACC:    13 CMP 0
+  DEBUG   machine:simulation    TICK:   146 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -32 ACC:    13 JE 12
+  DEBUG   machine:simulation    TICK:   147 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -32 ACC:    13 ADD #1
+  DEBUG   machine:simulation    TICK:   148 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    14 ACC:    14 ST 292
+  DEBUG   machine:simulation    TICK:   149 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    14 ACC:    14 ADD #0
+  DEBUG   machine:simulation    TICK:   150 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    14 ACC:    14 ST 293
+  DEBUG   machine:simulation    TICK:   151 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    14 ACC:    14 LD ~293
+  DEBUG   machine:simulation    TICK:   153 IP:     9 ADDR:    14 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmati' << 'c'
+  DEBUG   machine:simulation    TICK:   154 IP:    10 ADDR:    14 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 LD 292
+  DEBUG   machine:simulation    TICK:   155 IP:    11 ADDR:   292 MEM_OUT:    14 ALU_OUT:    14 ACC:    14 JMP 2
+  DEBUG   machine:simulation    TICK:   156 IP:     2 ADDR:   292 MEM_OUT:    14 ALU_OUT:    14 ACC:    14 CMP 0
+  DEBUG   machine:simulation    TICK:   157 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -31 ACC:    14 JE 12
+  DEBUG   machine:simulation    TICK:   158 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -31 ACC:    14 ADD #1
+  DEBUG   machine:simulation    TICK:   159 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    15 ACC:    15 ST 292
+  DEBUG   machine:simulation    TICK:   160 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    15 ACC:    15 ADD #0
+  DEBUG   machine:simulation    TICK:   161 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    15 ACC:    15 ST 293
+  DEBUG   machine:simulation    TICK:   162 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    15 ACC:    15 LD ~293
+  DEBUG   machine:simulation    TICK:   164 IP:     9 ADDR:    15 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatic' << 's'
+  DEBUG   machine:simulation    TICK:   165 IP:    10 ADDR:    15 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 LD 292
+  DEBUG   machine:simulation    TICK:   166 IP:    11 ADDR:   292 MEM_OUT:    15 ALU_OUT:    15 ACC:    15 JMP 2
+  DEBUG   machine:simulation    TICK:   167 IP:     2 ADDR:   292 MEM_OUT:    15 ALU_OUT:    15 ACC:    15 CMP 0
+  DEBUG   machine:simulation    TICK:   168 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -30 ACC:    15 JE 12
+  DEBUG   machine:simulation    TICK:   169 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -30 ACC:    15 ADD #1
+  DEBUG   machine:simulation    TICK:   170 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    16 ACC:    16 ST 292
+  DEBUG   machine:simulation    TICK:   171 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    16 ACC:    16 ADD #0
+  DEBUG   machine:simulation    TICK:   172 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    16 ACC:    16 ST 293
+  DEBUG   machine:simulation    TICK:   173 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    16 ACC:    16 LD ~293
+  DEBUG   machine:simulation    TICK:   175 IP:     9 ADDR:    16 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics' << ','
+  DEBUG   machine:simulation    TICK:   176 IP:    10 ADDR:    16 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 LD 292
+  DEBUG   machine:simulation    TICK:   177 IP:    11 ADDR:   292 MEM_OUT:    16 ALU_OUT:    16 ACC:    16 JMP 2
+  DEBUG   machine:simulation    TICK:   178 IP:     2 ADDR:   292 MEM_OUT:    16 ALU_OUT:    16 ACC:    16 CMP 0
+  DEBUG   machine:simulation    TICK:   179 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -29 ACC:    16 JE 12
+  DEBUG   machine:simulation    TICK:   180 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -29 ACC:    16 ADD #1
+  DEBUG   machine:simulation    TICK:   181 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    17 ACC:    17 ST 292
+  DEBUG   machine:simulation    TICK:   182 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    17 ACC:    17 ADD #0
+  DEBUG   machine:simulation    TICK:   183 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    17 ACC:    17 ST 293
+  DEBUG   machine:simulation    TICK:   184 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    17 ACC:    17 LD ~293
+  DEBUG   machine:simulation    TICK:   186 IP:     9 ADDR:    17 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics,' << ' '
+  DEBUG   machine:simulation    TICK:   187 IP:    10 ADDR:    17 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   188 IP:    11 ADDR:   292 MEM_OUT:    17 ALU_OUT:    17 ACC:    17 JMP 2
+  DEBUG   machine:simulation    TICK:   189 IP:     2 ADDR:   292 MEM_OUT:    17 ALU_OUT:    17 ACC:    17 CMP 0
+  DEBUG   machine:simulation    TICK:   190 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -28 ACC:    17 JE 12
+  DEBUG   machine:simulation    TICK:   191 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -28 ACC:    17 ADD #1
+  DEBUG   machine:simulation    TICK:   192 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    18 ACC:    18 ST 292
+  DEBUG   machine:simulation    TICK:   193 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    18 ACC:    18 ADD #0
+  DEBUG   machine:simulation    TICK:   194 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    18 ACC:    18 ST 293
+  DEBUG   machine:simulation    TICK:   195 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    18 ACC:    18 LD ~293
+  DEBUG   machine:simulation    TICK:   197 IP:     9 ADDR:    18 MEM_OUT:   114 ALU_OUT:   114 ACC:   114 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, ' << 'r'
+  DEBUG   machine:simulation    TICK:   198 IP:    10 ADDR:    18 MEM_OUT:   114 ALU_OUT:   114 ACC:   114 LD 292
+  DEBUG   machine:simulation    TICK:   199 IP:    11 ADDR:   292 MEM_OUT:    18 ALU_OUT:    18 ACC:    18 JMP 2
+  DEBUG   machine:simulation    TICK:   200 IP:     2 ADDR:   292 MEM_OUT:    18 ALU_OUT:    18 ACC:    18 CMP 0
+  DEBUG   machine:simulation    TICK:   201 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -27 ACC:    18 JE 12
+  DEBUG   machine:simulation    TICK:   202 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -27 ACC:    18 ADD #1
+  DEBUG   machine:simulation    TICK:   203 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    19 ACC:    19 ST 292
+  DEBUG   machine:simulation    TICK:   204 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    19 ACC:    19 ADD #0
+  DEBUG   machine:simulation    TICK:   205 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    19 ACC:    19 ST 293
+  DEBUG   machine:simulation    TICK:   206 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    19 ACC:    19 LD ~293
+  DEBUG   machine:simulation    TICK:   208 IP:     9 ADDR:    19 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, r' << 'e'
+  DEBUG   machine:simulation    TICK:   209 IP:    10 ADDR:    19 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 LD 292
+  DEBUG   machine:simulation    TICK:   210 IP:    11 ADDR:   292 MEM_OUT:    19 ALU_OUT:    19 ACC:    19 JMP 2
+  DEBUG   machine:simulation    TICK:   211 IP:     2 ADDR:   292 MEM_OUT:    19 ALU_OUT:    19 ACC:    19 CMP 0
+  DEBUG   machine:simulation    TICK:   212 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -26 ACC:    19 JE 12
+  DEBUG   machine:simulation    TICK:   213 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -26 ACC:    19 ADD #1
+  DEBUG   machine:simulation    TICK:   214 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    20 ACC:    20 ST 292
+  DEBUG   machine:simulation    TICK:   215 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    20 ACC:    20 ADD #0
+  DEBUG   machine:simulation    TICK:   216 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    20 ACC:    20 ST 293
+  DEBUG   machine:simulation    TICK:   217 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    20 ACC:    20 LD ~293
+  DEBUG   machine:simulation    TICK:   219 IP:     9 ADDR:    20 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, re' << 's'
+  DEBUG   machine:simulation    TICK:   220 IP:    10 ADDR:    20 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 LD 292
+  DEBUG   machine:simulation    TICK:   221 IP:    11 ADDR:   292 MEM_OUT:    20 ALU_OUT:    20 ACC:    20 JMP 2
+  DEBUG   machine:simulation    TICK:   222 IP:     2 ADDR:   292 MEM_OUT:    20 ALU_OUT:    20 ACC:    20 CMP 0
+  DEBUG   machine:simulation    TICK:   223 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -25 ACC:    20 JE 12
+  DEBUG   machine:simulation    TICK:   224 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -25 ACC:    20 ADD #1
+  DEBUG   machine:simulation    TICK:   225 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 ST 292
+  DEBUG   machine:simulation    TICK:   226 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 ADD #0
+  DEBUG   machine:simulation    TICK:   227 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 ST 293
+  DEBUG   machine:simulation    TICK:   228 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 LD ~293
+  DEBUG   machine:simulation    TICK:   230 IP:     9 ADDR:    21 MEM_OUT:   117 ALU_OUT:   117 ACC:   117 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, res' << 'u'
+  DEBUG   machine:simulation    TICK:   231 IP:    10 ADDR:    21 MEM_OUT:   117 ALU_OUT:   117 ACC:   117 LD 292
+  DEBUG   machine:simulation    TICK:   232 IP:    11 ADDR:   292 MEM_OUT:    21 ALU_OUT:    21 ACC:    21 JMP 2
+  DEBUG   machine:simulation    TICK:   233 IP:     2 ADDR:   292 MEM_OUT:    21 ALU_OUT:    21 ACC:    21 CMP 0
+  DEBUG   machine:simulation    TICK:   234 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -24 ACC:    21 JE 12
+  DEBUG   machine:simulation    TICK:   235 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -24 ACC:    21 ADD #1
+  DEBUG   machine:simulation    TICK:   236 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    22 ACC:    22 ST 292
+  DEBUG   machine:simulation    TICK:   237 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    22 ACC:    22 ADD #0
+  DEBUG   machine:simulation    TICK:   238 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    22 ACC:    22 ST 293
+  DEBUG   machine:simulation    TICK:   239 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    22 ACC:    22 LD ~293
+  DEBUG   machine:simulation    TICK:   241 IP:     9 ADDR:    22 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, resu' << 'l'
+  DEBUG   machine:simulation    TICK:   242 IP:    10 ADDR:    22 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 LD 292
+  DEBUG   machine:simulation    TICK:   243 IP:    11 ADDR:   292 MEM_OUT:    22 ALU_OUT:    22 ACC:    22 JMP 2
+  DEBUG   machine:simulation    TICK:   244 IP:     2 ADDR:   292 MEM_OUT:    22 ALU_OUT:    22 ACC:    22 CMP 0
+  DEBUG   machine:simulation    TICK:   245 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -23 ACC:    22 JE 12
+  DEBUG   machine:simulation    TICK:   246 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -23 ACC:    22 ADD #1
+  DEBUG   machine:simulation    TICK:   247 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    23 ACC:    23 ST 292
+  DEBUG   machine:simulation    TICK:   248 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    23 ACC:    23 ADD #0
+  DEBUG   machine:simulation    TICK:   249 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    23 ACC:    23 ST 293
+  DEBUG   machine:simulation    TICK:   250 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    23 ACC:    23 LD ~293
+  DEBUG   machine:simulation    TICK:   252 IP:     9 ADDR:    23 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, resul' << 't'
+  DEBUG   machine:simulation    TICK:   253 IP:    10 ADDR:    23 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 LD 292
+  DEBUG   machine:simulation    TICK:   254 IP:    11 ADDR:   292 MEM_OUT:    23 ALU_OUT:    23 ACC:    23 JMP 2
+  DEBUG   machine:simulation    TICK:   255 IP:     2 ADDR:   292 MEM_OUT:    23 ALU_OUT:    23 ACC:    23 CMP 0
+  DEBUG   machine:simulation    TICK:   256 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -22 ACC:    23 JE 12
+  DEBUG   machine:simulation    TICK:   257 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -22 ACC:    23 ADD #1
+  DEBUG   machine:simulation    TICK:   258 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    24 ACC:    24 ST 292
+  DEBUG   machine:simulation    TICK:   259 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    24 ACC:    24 ADD #0
+  DEBUG   machine:simulation    TICK:   260 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    24 ACC:    24 ST 293
+  DEBUG   machine:simulation    TICK:   261 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    24 ACC:    24 LD ~293
+  DEBUG   machine:simulation    TICK:   263 IP:     9 ADDR:    24 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result' << ' '
+  DEBUG   machine:simulation    TICK:   264 IP:    10 ADDR:    24 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   265 IP:    11 ADDR:   292 MEM_OUT:    24 ALU_OUT:    24 ACC:    24 JMP 2
+  DEBUG   machine:simulation    TICK:   266 IP:     2 ADDR:   292 MEM_OUT:    24 ALU_OUT:    24 ACC:    24 CMP 0
+  DEBUG   machine:simulation    TICK:   267 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -21 ACC:    24 JE 12
+  DEBUG   machine:simulation    TICK:   268 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -21 ACC:    24 ADD #1
+  DEBUG   machine:simulation    TICK:   269 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    25 ACC:    25 ST 292
+  DEBUG   machine:simulation    TICK:   270 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    25 ACC:    25 ADD #0
+  DEBUG   machine:simulation    TICK:   271 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    25 ACC:    25 ST 293
+  DEBUG   machine:simulation    TICK:   272 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    25 ACC:    25 LD ~293
+  DEBUG   machine:simulation    TICK:   274 IP:     9 ADDR:    25 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result ' << 'm'
+  DEBUG   machine:simulation    TICK:   275 IP:    10 ADDR:    25 MEM_OUT:   109 ALU_OUT:   109 ACC:   109 LD 292
+  DEBUG   machine:simulation    TICK:   276 IP:    11 ADDR:   292 MEM_OUT:    25 ALU_OUT:    25 ACC:    25 JMP 2
+  DEBUG   machine:simulation    TICK:   277 IP:     2 ADDR:   292 MEM_OUT:    25 ALU_OUT:    25 ACC:    25 CMP 0
+  DEBUG   machine:simulation    TICK:   278 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -20 ACC:    25 JE 12
+  DEBUG   machine:simulation    TICK:   279 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -20 ACC:    25 ADD #1
+  DEBUG   machine:simulation    TICK:   280 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    26 ACC:    26 ST 292
+  DEBUG   machine:simulation    TICK:   281 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    26 ACC:    26 ADD #0
+  DEBUG   machine:simulation    TICK:   282 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    26 ACC:    26 ST 293
+  DEBUG   machine:simulation    TICK:   283 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    26 ACC:    26 LD ~293
+  DEBUG   machine:simulation    TICK:   285 IP:     9 ADDR:    26 MEM_OUT:   117 ALU_OUT:   117 ACC:   117 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result m' << 'u'
+  DEBUG   machine:simulation    TICK:   286 IP:    10 ADDR:    26 MEM_OUT:   117 ALU_OUT:   117 ACC:   117 LD 292
+  DEBUG   machine:simulation    TICK:   287 IP:    11 ADDR:   292 MEM_OUT:    26 ALU_OUT:    26 ACC:    26 JMP 2
+  DEBUG   machine:simulation    TICK:   288 IP:     2 ADDR:   292 MEM_OUT:    26 ALU_OUT:    26 ACC:    26 CMP 0
+  DEBUG   machine:simulation    TICK:   289 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -19 ACC:    26 JE 12
+  DEBUG   machine:simulation    TICK:   290 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -19 ACC:    26 ADD #1
+  DEBUG   machine:simulation    TICK:   291 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    27 ACC:    27 ST 292
+  DEBUG   machine:simulation    TICK:   292 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    27 ACC:    27 ADD #0
+  DEBUG   machine:simulation    TICK:   293 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    27 ACC:    27 ST 293
+  DEBUG   machine:simulation    TICK:   294 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    27 ACC:    27 LD ~293
+  DEBUG   machine:simulation    TICK:   296 IP:     9 ADDR:    27 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result mu' << 's'
+  DEBUG   machine:simulation    TICK:   297 IP:    10 ADDR:    27 MEM_OUT:   115 ALU_OUT:   115 ACC:   115 LD 292
+  DEBUG   machine:simulation    TICK:   298 IP:    11 ADDR:   292 MEM_OUT:    27 ALU_OUT:    27 ACC:    27 JMP 2
+  DEBUG   machine:simulation    TICK:   299 IP:     2 ADDR:   292 MEM_OUT:    27 ALU_OUT:    27 ACC:    27 CMP 0
+  DEBUG   machine:simulation    TICK:   300 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -18 ACC:    27 JE 12
+  DEBUG   machine:simulation    TICK:   301 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -18 ACC:    27 ADD #1
+  DEBUG   machine:simulation    TICK:   302 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    28 ACC:    28 ST 292
+  DEBUG   machine:simulation    TICK:   303 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    28 ACC:    28 ADD #0
+  DEBUG   machine:simulation    TICK:   304 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    28 ACC:    28 ST 293
+  DEBUG   machine:simulation    TICK:   305 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    28 ACC:    28 LD ~293
+  DEBUG   machine:simulation    TICK:   307 IP:     9 ADDR:    28 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result mus' << 't'
+  DEBUG   machine:simulation    TICK:   308 IP:    10 ADDR:    28 MEM_OUT:   116 ALU_OUT:   116 ACC:   116 LD 292
+  DEBUG   machine:simulation    TICK:   309 IP:    11 ADDR:   292 MEM_OUT:    28 ALU_OUT:    28 ACC:    28 JMP 2
+  DEBUG   machine:simulation    TICK:   310 IP:     2 ADDR:   292 MEM_OUT:    28 ALU_OUT:    28 ACC:    28 CMP 0
+  DEBUG   machine:simulation    TICK:   311 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -17 ACC:    28 JE 12
+  DEBUG   machine:simulation    TICK:   312 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -17 ACC:    28 ADD #1
+  DEBUG   machine:simulation    TICK:   313 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    29 ACC:    29 ST 292
+  DEBUG   machine:simulation    TICK:   314 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    29 ACC:    29 ADD #0
+  DEBUG   machine:simulation    TICK:   315 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    29 ACC:    29 ST 293
+  DEBUG   machine:simulation    TICK:   316 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    29 ACC:    29 LD ~293
+  DEBUG   machine:simulation    TICK:   318 IP:     9 ADDR:    29 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must' << ' '
+  DEBUG   machine:simulation    TICK:   319 IP:    10 ADDR:    29 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   320 IP:    11 ADDR:   292 MEM_OUT:    29 ALU_OUT:    29 ACC:    29 JMP 2
+  DEBUG   machine:simulation    TICK:   321 IP:     2 ADDR:   292 MEM_OUT:    29 ALU_OUT:    29 ACC:    29 CMP 0
+  DEBUG   machine:simulation    TICK:   322 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -16 ACC:    29 JE 12
+  DEBUG   machine:simulation    TICK:   323 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -16 ACC:    29 ADD #1
+  DEBUG   machine:simulation    TICK:   324 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    30 ACC:    30 ST 292
+  DEBUG   machine:simulation    TICK:   325 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    30 ACC:    30 ADD #0
+  DEBUG   machine:simulation    TICK:   326 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    30 ACC:    30 ST 293
+  DEBUG   machine:simulation    TICK:   327 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    30 ACC:    30 LD ~293
+  DEBUG   machine:simulation    TICK:   329 IP:     9 ADDR:    30 MEM_OUT:    98 ALU_OUT:    98 ACC:    98 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must ' << 'b'
+  DEBUG   machine:simulation    TICK:   330 IP:    10 ADDR:    30 MEM_OUT:    98 ALU_OUT:    98 ACC:    98 LD 292
+  DEBUG   machine:simulation    TICK:   331 IP:    11 ADDR:   292 MEM_OUT:    30 ALU_OUT:    30 ACC:    30 JMP 2
+  DEBUG   machine:simulation    TICK:   332 IP:     2 ADDR:   292 MEM_OUT:    30 ALU_OUT:    30 ACC:    30 CMP 0
+  DEBUG   machine:simulation    TICK:   333 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -15 ACC:    30 JE 12
+  DEBUG   machine:simulation    TICK:   334 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -15 ACC:    30 ADD #1
+  DEBUG   machine:simulation    TICK:   335 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    31 ACC:    31 ST 292
+  DEBUG   machine:simulation    TICK:   336 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    31 ACC:    31 ADD #0
+  DEBUG   machine:simulation    TICK:   337 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    31 ACC:    31 ST 293
+  DEBUG   machine:simulation    TICK:   338 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    31 ACC:    31 LD ~293
+  DEBUG   machine:simulation    TICK:   340 IP:     9 ADDR:    31 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must b' << 'e'
+  DEBUG   machine:simulation    TICK:   341 IP:    10 ADDR:    31 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 LD 292
+  DEBUG   machine:simulation    TICK:   342 IP:    11 ADDR:   292 MEM_OUT:    31 ALU_OUT:    31 ACC:    31 JMP 2
+  DEBUG   machine:simulation    TICK:   343 IP:     2 ADDR:   292 MEM_OUT:    31 ALU_OUT:    31 ACC:    31 CMP 0
+  DEBUG   machine:simulation    TICK:   344 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -14 ACC:    31 JE 12
+  DEBUG   machine:simulation    TICK:   345 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -14 ACC:    31 ADD #1
+  DEBUG   machine:simulation    TICK:   346 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    32 ACC:    32 ST 292
+  DEBUG   machine:simulation    TICK:   347 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    32 ACC:    32 ADD #0
+  DEBUG   machine:simulation    TICK:   348 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    32 ACC:    32 ST 293
+  DEBUG   machine:simulation    TICK:   349 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    32 ACC:    32 LD ~293
+  DEBUG   machine:simulation    TICK:   351 IP:     9 ADDR:    32 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be' << ' '
+  DEBUG   machine:simulation    TICK:   352 IP:    10 ADDR:    32 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   353 IP:    11 ADDR:   292 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 JMP 2
+  DEBUG   machine:simulation    TICK:   354 IP:     2 ADDR:   292 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 CMP 0
+  DEBUG   machine:simulation    TICK:   355 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -13 ACC:    32 JE 12
+  DEBUG   machine:simulation    TICK:   356 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -13 ACC:    32 ADD #1
+  DEBUG   machine:simulation    TICK:   357 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    33 ACC:    33 ST 292
+  DEBUG   machine:simulation    TICK:   358 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    33 ACC:    33 ADD #0
+  DEBUG   machine:simulation    TICK:   359 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    33 ACC:    33 ST 293
+  DEBUG   machine:simulation    TICK:   360 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    33 ACC:    33 LD ~293
+  DEBUG   machine:simulation    TICK:   362 IP:     9 ADDR:    33 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be ' << '-'
+  DEBUG   machine:simulation    TICK:   363 IP:    10 ADDR:    33 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 LD 292
+  DEBUG   machine:simulation    TICK:   364 IP:    11 ADDR:   292 MEM_OUT:    33 ALU_OUT:    33 ACC:    33 JMP 2
+  DEBUG   machine:simulation    TICK:   365 IP:     2 ADDR:   292 MEM_OUT:    33 ALU_OUT:    33 ACC:    33 CMP 0
+  DEBUG   machine:simulation    TICK:   366 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -12 ACC:    33 JE 12
+  DEBUG   machine:simulation    TICK:   367 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -12 ACC:    33 ADD #1
+  DEBUG   machine:simulation    TICK:   368 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    34 ACC:    34 ST 292
+  DEBUG   machine:simulation    TICK:   369 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    34 ACC:    34 ADD #0
+  DEBUG   machine:simulation    TICK:   370 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    34 ACC:    34 ST 293
+  DEBUG   machine:simulation    TICK:   371 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    34 ACC:    34 LD ~293
+  DEBUG   machine:simulation    TICK:   373 IP:     9 ADDR:    34 MEM_OUT:    50 ALU_OUT:    50 ACC:    50 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -' << '2'
+  DEBUG   machine:simulation    TICK:   374 IP:    10 ADDR:    34 MEM_OUT:    50 ALU_OUT:    50 ACC:    50 LD 292
+  DEBUG   machine:simulation    TICK:   375 IP:    11 ADDR:   292 MEM_OUT:    34 ALU_OUT:    34 ACC:    34 JMP 2
+  DEBUG   machine:simulation    TICK:   376 IP:     2 ADDR:   292 MEM_OUT:    34 ALU_OUT:    34 ACC:    34 CMP 0
+  DEBUG   machine:simulation    TICK:   377 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -11 ACC:    34 JE 12
+  DEBUG   machine:simulation    TICK:   378 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -11 ACC:    34 ADD #1
+  DEBUG   machine:simulation    TICK:   379 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    35 ACC:    35 ST 292
+  DEBUG   machine:simulation    TICK:   380 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    35 ACC:    35 ADD #0
+  DEBUG   machine:simulation    TICK:   381 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    35 ACC:    35 ST 293
+  DEBUG   machine:simulation    TICK:   382 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    35 ACC:    35 LD ~293
+  DEBUG   machine:simulation    TICK:   384 IP:     9 ADDR:    35 MEM_OUT:    49 ALU_OUT:    49 ACC:    49 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -2' << '1'
+  DEBUG   machine:simulation    TICK:   385 IP:    10 ADDR:    35 MEM_OUT:    49 ALU_OUT:    49 ACC:    49 LD 292
+  DEBUG   machine:simulation    TICK:   386 IP:    11 ADDR:   292 MEM_OUT:    35 ALU_OUT:    35 ACC:    35 JMP 2
+  DEBUG   machine:simulation    TICK:   387 IP:     2 ADDR:   292 MEM_OUT:    35 ALU_OUT:    35 ACC:    35 CMP 0
+  DEBUG   machine:simulation    TICK:   388 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -10 ACC:    35 JE 12
+  DEBUG   machine:simulation    TICK:   389 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:   -10 ACC:    35 ADD #1
+  DEBUG   machine:simulation    TICK:   390 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    36 ACC:    36 ST 292
+  DEBUG   machine:simulation    TICK:   391 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    36 ACC:    36 ADD #0
+  DEBUG   machine:simulation    TICK:   392 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    36 ACC:    36 ST 293
+  DEBUG   machine:simulation    TICK:   393 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    36 ACC:    36 LD ~293
+  DEBUG   machine:simulation    TICK:   395 IP:     9 ADDR:    36 MEM_OUT:    48 ALU_OUT:    48 ACC:    48 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -21' << '0'
+  DEBUG   machine:simulation    TICK:   396 IP:    10 ADDR:    36 MEM_OUT:    48 ALU_OUT:    48 ACC:    48 LD 292
+  DEBUG   machine:simulation    TICK:   397 IP:    11 ADDR:   292 MEM_OUT:    36 ALU_OUT:    36 ACC:    36 JMP 2
+  DEBUG   machine:simulation    TICK:   398 IP:     2 ADDR:   292 MEM_OUT:    36 ALU_OUT:    36 ACC:    36 CMP 0
+  DEBUG   machine:simulation    TICK:   399 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -9 ACC:    36 JE 12
+  DEBUG   machine:simulation    TICK:   400 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -9 ACC:    36 ADD #1
+  DEBUG   machine:simulation    TICK:   401 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    37 ACC:    37 ST 292
+  DEBUG   machine:simulation    TICK:   402 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    37 ACC:    37 ADD #0
+  DEBUG   machine:simulation    TICK:   403 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    37 ACC:    37 ST 293
+  DEBUG   machine:simulation    TICK:   404 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    37 ACC:    37 LD ~293
+  DEBUG   machine:simulation    TICK:   406 IP:     9 ADDR:    37 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210' << ','
+  DEBUG   machine:simulation    TICK:   407 IP:    10 ADDR:    37 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 LD 292
+  DEBUG   machine:simulation    TICK:   408 IP:    11 ADDR:   292 MEM_OUT:    37 ALU_OUT:    37 ACC:    37 JMP 2
+  DEBUG   machine:simulation    TICK:   409 IP:     2 ADDR:   292 MEM_OUT:    37 ALU_OUT:    37 ACC:    37 CMP 0
+  DEBUG   machine:simulation    TICK:   410 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -8 ACC:    37 JE 12
+  DEBUG   machine:simulation    TICK:   411 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -8 ACC:    37 ADD #1
+  DEBUG   machine:simulation    TICK:   412 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    38 ACC:    38 ST 292
+  DEBUG   machine:simulation    TICK:   413 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    38 ACC:    38 ADD #0
+  DEBUG   machine:simulation    TICK:   414 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    38 ACC:    38 ST 293
+  DEBUG   machine:simulation    TICK:   415 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    38 ACC:    38 LD ~293
+  DEBUG   machine:simulation    TICK:   417 IP:     9 ADDR:    38 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210,' << ' '
+  DEBUG   machine:simulation    TICK:   418 IP:    10 ADDR:    38 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   419 IP:    11 ADDR:   292 MEM_OUT:    38 ALU_OUT:    38 ACC:    38 JMP 2
+  DEBUG   machine:simulation    TICK:   420 IP:     2 ADDR:   292 MEM_OUT:    38 ALU_OUT:    38 ACC:    38 CMP 0
+  DEBUG   machine:simulation    TICK:   421 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -7 ACC:    38 JE 12
+  DEBUG   machine:simulation    TICK:   422 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -7 ACC:    38 ADD #1
+  DEBUG   machine:simulation    TICK:   423 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    39 ACC:    39 ST 292
+  DEBUG   machine:simulation    TICK:   424 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    39 ACC:    39 ADD #0
+  DEBUG   machine:simulation    TICK:   425 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    39 ACC:    39 ST 293
+  DEBUG   machine:simulation    TICK:   426 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    39 ACC:    39 LD ~293
+  DEBUG   machine:simulation    TICK:   428 IP:     9 ADDR:    39 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, ' << 'c'
+  DEBUG   machine:simulation    TICK:   429 IP:    10 ADDR:    39 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 LD 292
+  DEBUG   machine:simulation    TICK:   430 IP:    11 ADDR:   292 MEM_OUT:    39 ALU_OUT:    39 ACC:    39 JMP 2
+  DEBUG   machine:simulation    TICK:   431 IP:     2 ADDR:   292 MEM_OUT:    39 ALU_OUT:    39 ACC:    39 CMP 0
+  DEBUG   machine:simulation    TICK:   432 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -6 ACC:    39 JE 12
+  DEBUG   machine:simulation    TICK:   433 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -6 ACC:    39 ADD #1
+  DEBUG   machine:simulation    TICK:   434 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    40 ACC:    40 ST 292
+  DEBUG   machine:simulation    TICK:   435 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    40 ACC:    40 ADD #0
+  DEBUG   machine:simulation    TICK:   436 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    40 ACC:    40 ST 293
+  DEBUG   machine:simulation    TICK:   437 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    40 ACC:    40 LD ~293
+  DEBUG   machine:simulation    TICK:   439 IP:     9 ADDR:    40 MEM_OUT:   104 ALU_OUT:   104 ACC:   104 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, c' << 'h'
+  DEBUG   machine:simulation    TICK:   440 IP:    10 ADDR:    40 MEM_OUT:   104 ALU_OUT:   104 ACC:   104 LD 292
+  DEBUG   machine:simulation    TICK:   441 IP:    11 ADDR:   292 MEM_OUT:    40 ALU_OUT:    40 ACC:    40 JMP 2
+  DEBUG   machine:simulation    TICK:   442 IP:     2 ADDR:   292 MEM_OUT:    40 ALU_OUT:    40 ACC:    40 CMP 0
+  DEBUG   machine:simulation    TICK:   443 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -5 ACC:    40 JE 12
+  DEBUG   machine:simulation    TICK:   444 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -5 ACC:    40 ADD #1
+  DEBUG   machine:simulation    TICK:   445 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    41 ACC:    41 ST 292
+  DEBUG   machine:simulation    TICK:   446 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    41 ACC:    41 ADD #0
+  DEBUG   machine:simulation    TICK:   447 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    41 ACC:    41 ST 293
+  DEBUG   machine:simulation    TICK:   448 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    41 ACC:    41 LD ~293
+  DEBUG   machine:simulation    TICK:   450 IP:     9 ADDR:    41 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, ch' << 'e'
+  DEBUG   machine:simulation    TICK:   451 IP:    10 ADDR:    41 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 LD 292
+  DEBUG   machine:simulation    TICK:   452 IP:    11 ADDR:   292 MEM_OUT:    41 ALU_OUT:    41 ACC:    41 JMP 2
+  DEBUG   machine:simulation    TICK:   453 IP:     2 ADDR:   292 MEM_OUT:    41 ALU_OUT:    41 ACC:    41 CMP 0
+  DEBUG   machine:simulation    TICK:   454 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -4 ACC:    41 JE 12
+  DEBUG   machine:simulation    TICK:   455 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -4 ACC:    41 ADD #1
+  DEBUG   machine:simulation    TICK:   456 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    42 ACC:    42 ST 292
+  DEBUG   machine:simulation    TICK:   457 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    42 ACC:    42 ADD #0
+  DEBUG   machine:simulation    TICK:   458 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    42 ACC:    42 ST 293
+  DEBUG   machine:simulation    TICK:   459 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    42 ACC:    42 LD ~293
+  DEBUG   machine:simulation    TICK:   461 IP:     9 ADDR:    42 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, che' << 'c'
+  DEBUG   machine:simulation    TICK:   462 IP:    10 ADDR:    42 MEM_OUT:    99 ALU_OUT:    99 ACC:    99 LD 292
+  DEBUG   machine:simulation    TICK:   463 IP:    11 ADDR:   292 MEM_OUT:    42 ALU_OUT:    42 ACC:    42 JMP 2
+  DEBUG   machine:simulation    TICK:   464 IP:     2 ADDR:   292 MEM_OUT:    42 ALU_OUT:    42 ACC:    42 CMP 0
+  DEBUG   machine:simulation    TICK:   465 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -3 ACC:    42 JE 12
+  DEBUG   machine:simulation    TICK:   466 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -3 ACC:    42 ADD #1
+  DEBUG   machine:simulation    TICK:   467 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    43 ACC:    43 ST 292
+  DEBUG   machine:simulation    TICK:   468 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    43 ACC:    43 ADD #0
+  DEBUG   machine:simulation    TICK:   469 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    43 ACC:    43 ST 293
+  DEBUG   machine:simulation    TICK:   470 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    43 ACC:    43 LD ~293
+  DEBUG   machine:simulation    TICK:   472 IP:     9 ADDR:    43 MEM_OUT:   107 ALU_OUT:   107 ACC:   107 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, chec' << 'k'
+  DEBUG   machine:simulation    TICK:   473 IP:    10 ADDR:    43 MEM_OUT:   107 ALU_OUT:   107 ACC:   107 LD 292
+  DEBUG   machine:simulation    TICK:   474 IP:    11 ADDR:   292 MEM_OUT:    43 ALU_OUT:    43 ACC:    43 JMP 2
+  DEBUG   machine:simulation    TICK:   475 IP:     2 ADDR:   292 MEM_OUT:    43 ALU_OUT:    43 ACC:    43 CMP 0
+  DEBUG   machine:simulation    TICK:   476 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -2 ACC:    43 JE 12
+  DEBUG   machine:simulation    TICK:   477 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -2 ACC:    43 ADD #1
+  DEBUG   machine:simulation    TICK:   478 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    44 ACC:    44 ST 292
+  DEBUG   machine:simulation    TICK:   479 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    44 ACC:    44 ADD #0
+  DEBUG   machine:simulation    TICK:   480 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    44 ACC:    44 ST 293
+  DEBUG   machine:simulation    TICK:   481 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    44 ACC:    44 LD ~293
+  DEBUG   machine:simulation    TICK:   483 IP:     9 ADDR:    44 MEM_OUT:    58 ALU_OUT:    58 ACC:    58 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check' << ':'
+  DEBUG   machine:simulation    TICK:   484 IP:    10 ADDR:    44 MEM_OUT:    58 ALU_OUT:    58 ACC:    58 LD 292
+  DEBUG   machine:simulation    TICK:   485 IP:    11 ADDR:   292 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 JMP 2
+  DEBUG   machine:simulation    TICK:   486 IP:     2 ADDR:   292 MEM_OUT:    44 ALU_OUT:    44 ACC:    44 CMP 0
+  DEBUG   machine:simulation    TICK:   487 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -1 ACC:    44 JE 12
+  DEBUG   machine:simulation    TICK:   488 IP:     4 ADDR:     0 MEM_OUT:    45 ALU_OUT:    -1 ACC:    44 ADD #1
+  DEBUG   machine:simulation    TICK:   489 IP:     5 ADDR:     0 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 ST 292
+  DEBUG   machine:simulation    TICK:   490 IP:     6 ADDR:   292 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 ADD #0
+  DEBUG   machine:simulation    TICK:   491 IP:     7 ADDR:   292 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 ST 293
+  DEBUG   machine:simulation    TICK:   492 IP:     8 ADDR:   293 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 LD ~293
+  DEBUG   machine:simulation    TICK:   494 IP:     9 ADDR:    45 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check:' << ' '
+  DEBUG   machine:simulation    TICK:   495 IP:    10 ADDR:    45 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 292
+  DEBUG   machine:simulation    TICK:   496 IP:    11 ADDR:   292 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 JMP 2
+  DEBUG   machine:simulation    TICK:   497 IP:     2 ADDR:   292 MEM_OUT:    45 ALU_OUT:    45 ACC:    45 CMP 0
+  DEBUG   machine:simulation    TICK:   498 IP:     3 ADDR:     0 MEM_OUT:    45 ALU_OUT:     0 ACC:    45 JE 12
+  DEBUG   machine:simulation    TICK:   499 IP:    12 ADDR:     0 MEM_OUT:    45 ALU_OUT:     0 ACC:    45 LD #7
+  DEBUG   machine:simulation    TICK:   500 IP:    13 ADDR:     0 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 ST 292
+  DEBUG   machine:simulation    TICK:   501 IP:    14 ADDR:   292 MEM_OUT:    45 ALU_OUT:     7 ACC:     7 LD #21
+  DEBUG   machine:simulation    TICK:   502 IP:    15 ADDR:   292 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 ST 293
+  DEBUG   machine:simulation    TICK:   503 IP:    16 ADDR:   293 MEM_OUT:    45 ALU_OUT:    21 ACC:    21 MOD 292
+  DEBUG   machine:simulation    TICK:   504 IP:    17 ADDR:   292 MEM_OUT:     7 ALU_OUT:     0 ACC:     0 ST 292
+  DEBUG   machine:simulation    TICK:   505 IP:    18 ADDR:   292 MEM_OUT:     7 ALU_OUT:     0 ACC:     0 LD #5
+  DEBUG   machine:simulation    TICK:   506 IP:    19 ADDR:   292 MEM_OUT:     7 ALU_OUT:     5 ACC:     5 ST 293
+  DEBUG   machine:simulation    TICK:   507 IP:    20 ADDR:   293 MEM_OUT:     7 ALU_OUT:     5 ACC:     5 ADD 292
+  DEBUG   machine:simulation    TICK:   508 IP:    21 ADDR:   292 MEM_OUT:     0 ALU_OUT:     5 ACC:     5 ST 292
+  DEBUG   machine:simulation    TICK:   509 IP:    22 ADDR:   292 MEM_OUT:     0 ALU_OUT:     5 ACC:     5 LD #4
+  DEBUG   machine:simulation    TICK:   510 IP:    23 ADDR:   292 MEM_OUT:     0 ALU_OUT:     4 ACC:     4 ST 293
+  DEBUG   machine:simulation    TICK:   511 IP:    24 ADDR:   293 MEM_OUT:     0 ALU_OUT:     4 ACC:     4 LD #9
+  DEBUG   machine:simulation    TICK:   512 IP:    25 ADDR:   293 MEM_OUT:     0 ALU_OUT:     9 ACC:     9 ST 294
+  DEBUG   machine:simulation    TICK:   513 IP:    26 ADDR:   294 MEM_OUT:     0 ALU_OUT:     9 ACC:     9 DIV 293
+  DEBUG   machine:simulation    TICK:   514 IP:    27 ADDR:   293 MEM_OUT:     4 ALU_OUT:     2 ACC:     2 ST 293
+  DEBUG   machine:simulation    TICK:   515 IP:    28 ADDR:   293 MEM_OUT:     4 ALU_OUT:     2 ACC:     2 LD #6
+  DEBUG   machine:simulation    TICK:   516 IP:    29 ADDR:   293 MEM_OUT:     4 ALU_OUT:     6 ACC:     6 ST 294
+  DEBUG   machine:simulation    TICK:   517 IP:    30 ADDR:   294 MEM_OUT:     4 ALU_OUT:     6 ACC:     6 MUL 293
+  DEBUG   machine:simulation    TICK:   518 IP:    31 ADDR:   293 MEM_OUT:     2 ALU_OUT:    12 ACC:    12 ST 293
+  DEBUG   machine:simulation    TICK:   519 IP:    32 ADDR:   293 MEM_OUT:     2 ALU_OUT:    12 ACC:    12 LD #3
+  DEBUG   machine:simulation    TICK:   520 IP:    33 ADDR:   293 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 ST 294
+  DEBUG   machine:simulation    TICK:   521 IP:    34 ADDR:   294 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 LD #179
+  DEBUG   machine:simulation    TICK:   522 IP:    35 ADDR:   294 MEM_OUT:     2 ALU_OUT:   179 ACC:   179 ST 295
+  DEBUG   machine:simulation    TICK:   523 IP:    36 ADDR:   295 MEM_OUT:     2 ALU_OUT:   179 ACC:   179 DIV 294
+  DEBUG   machine:simulation    TICK:   524 IP:    37 ADDR:   294 MEM_OUT:     3 ALU_OUT:    59 ACC:    59 ST 294
+  DEBUG   machine:simulation    TICK:   525 IP:    38 ADDR:   294 MEM_OUT:     3 ALU_OUT:    59 ACC:    59 LD #3
+  DEBUG   machine:simulation    TICK:   526 IP:    39 ADDR:   294 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ST 295
+  DEBUG   machine:simulation    TICK:   527 IP:    40 ADDR:   295 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 LD #512367126
+  DEBUG   machine:simulation    TICK:   528 IP:    41 ADDR:   295 MEM_OUT:     3 ALU_OUT: 512367126 ACC: 512367126 ST 296
+  DEBUG   machine:simulation    TICK:   529 IP:    42 ADDR:   296 MEM_OUT:     3 ALU_OUT: 512367126 ACC: 512367126 MUL #-1
+  DEBUG   machine:simulation    TICK:   530 IP:    43 ADDR:   296 MEM_OUT:     3 ALU_OUT: -512367126 ACC: -512367126 ST 296
+  DEBUG   machine:simulation    TICK:   531 IP:    44 ADDR:   296 MEM_OUT:     3 ALU_OUT: -512367126 ACC: -512367126 MOD 295
+  DEBUG   machine:simulation    TICK:   532 IP:    45 ADDR:   295 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 ST 295
+  DEBUG   machine:simulation    TICK:   533 IP:    46 ADDR:   295 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 LD #11
+  DEBUG   machine:simulation    TICK:   534 IP:    47 ADDR:   295 MEM_OUT:     3 ALU_OUT:    11 ACC:    11 ST 296
+  DEBUG   machine:simulation    TICK:   535 IP:    48 ADDR:   296 MEM_OUT:     3 ALU_OUT:    11 ACC:    11 LD #23
+  DEBUG   machine:simulation    TICK:   536 IP:    49 ADDR:   296 MEM_OUT:     3 ALU_OUT:    23 ACC:    23 ST 297
+  DEBUG   machine:simulation    TICK:   537 IP:    50 ADDR:   297 MEM_OUT:     3 ALU_OUT:    23 ACC:    23 DIV 296
+  DEBUG   machine:simulation    TICK:   538 IP:    51 ADDR:   296 MEM_OUT:    11 ALU_OUT:     2 ACC:     2 ST 296
+  DEBUG   machine:simulation    TICK:   539 IP:    52 ADDR:   296 MEM_OUT:    11 ALU_OUT:     2 ACC:     2 LD #1000
+  DEBUG   machine:simulation    TICK:   540 IP:    53 ADDR:   296 MEM_OUT:    11 ALU_OUT:  1000 ACC:  1000 ST 297
+  DEBUG   machine:simulation    TICK:   541 IP:    54 ADDR:   297 MEM_OUT:    11 ALU_OUT:  1000 ACC:  1000 LD #43
+  DEBUG   machine:simulation    TICK:   542 IP:    55 ADDR:   297 MEM_OUT:    11 ALU_OUT:    43 ACC:    43 ST 298
+  DEBUG   machine:simulation    TICK:   543 IP:    56 ADDR:   298 MEM_OUT:    11 ALU_OUT:    43 ACC:    43 MUL #-1
+  DEBUG   machine:simulation    TICK:   544 IP:    57 ADDR:   298 MEM_OUT:    11 ALU_OUT:   -43 ACC:   -43 ST 298
+  INFO    machine:simulation    To see more than 500 executed instructions, purchase the paid version of the program!
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: ' << '-210'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210' << '.'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210.' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. ' << 'O'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. O' << 'k'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok!' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ ' << 'N'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ N' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ No' << 'w'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now' << ','
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now,' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, ' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, i' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, it' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its ' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its t' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its ti' << 'm'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its tim' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time ' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time t' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to ' << 'd'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to d' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do ' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do s' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do so' << 'm'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do som' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some ' << 'b'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some b' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some bo' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boo' << 'l'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some bool' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boole' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolea' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean ' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean s' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean st' << 'u'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stu' << 'f'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuf' << 'f'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff' << ':'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff:' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: ' << '1'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1' << '.'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1.' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. ' << 'Y'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. Y' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. Yo' << 'u'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You ' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You s' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You se' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see' << '?'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see?' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? ' << 'I'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? I' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? It' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its ' << '1'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ ' << 'L'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ L' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Le' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Let' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets a' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets as' << 'k'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask ' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask t' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask th' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the ' << 'g'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the g' << 'u'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the gu' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the gur' << 'u'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru' << ','
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru,' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, ' << 'w'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, w' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, wh' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, whi' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, whic' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which ' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which i' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is ' << 'b'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is b' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is be' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is bet' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is bett' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is bette' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better' << ':'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better:' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: ' << 'p'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: p' << 'y'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: py' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: pyt' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: pyth' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: pytho' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python' << '.'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python.' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. ' << 'Y'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Y' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Ye' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yea' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah ' << 'y'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah y' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah ye' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yea' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~' << '~'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ ' << 'T'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ T' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Te' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Tes' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Test' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testi' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testin' << 'g'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing ' << 'b'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing b' << 'l'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing bl' << 'o'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blo' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing bloc' << 'k'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing block' << 's'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks' << ':'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks:' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: c' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: ca' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: can' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant ' << 'p'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant p' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant pr' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant pri' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant prin' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print c' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc ' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc h' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc he' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc her' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here!' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! c' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! ca' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! can' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant ' << 'p'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant p' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant pr' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant pri' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant prin' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print c' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc ' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc h' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc he' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc her' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here!' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! c' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! ca' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! can' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant ' << 'p'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant p' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant pr' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant pri' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant prin' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print c' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc ' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc h' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc he' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc her' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here!' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! ' << 'c'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! c' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! ca' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! can' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant ' << 'p'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant p' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant pr' << 'i'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant pri' << 'n'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant prin' << 't'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print ' << 'b'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print b' << 'b'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb ' << 'h'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb h' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb he' << 'r'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb her' << 'e'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here' << '!'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here!' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! ' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! a' << 'a'
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa ' << '='
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa =' << ' '
+  DEBUG   machine:signal_output output: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa = ' << '666'
+  INFO    machine:simulation    output_buffer: 'Cool mathmatics, result must be -210, check: -210. Ok! ~~~ Now, its time to do some boolean stuff: 1. You see? Its 1!~~~ Lets ask the guru, which is better: python. Yeah yeah!~~~ Testing blocks: cant print cc here! cant print cc here! cant print cc here! cant print bb here! aa = 666'
+

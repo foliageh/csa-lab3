@@ -1,0 +1,182 @@
+in_source: |-
+  > 'Hello world!'
+in_stdin: |
+out_stdout: |
+  source LoC: 1
+  code instr: 13
+  code bytes: 65
+  ============================================================
+  output: 'Hello world!'
+  instr executed: 124
+  ticks: 136
+out_code: |-
+  ~~~~~ INSTRUCTIONS ~~~~~
+  address   hexcode        mnemonic
+  0         1200000000     LD #0
+  1         140000000d     ST 13
+  2         3400000000     CMP 0
+  3         3c0000000c     JE 12
+  4         1a00000001     ADD #1
+  5         140000000d     ST 13
+  6         1a00000000     ADD #0
+  7         140000000e     ST 14
+  8         110000000e     LD ~14
+  9         5000000000     OUT 0
+  10        100000000d     LD 13
+  11        3800000002     JMP 2
+  12        0400000000     HLT
+  ~~~~~ MEMORY ~~~~~
+  address   int
+  0         12
+  1         72
+  2         101
+  3         108
+  4         108
+  5         111
+  6         32
+  7         119
+  8         111
+  9         114
+  10        108
+  11        100
+  12        33
+out_log: |
+  DEBUG   machine:simulation    TICK:     0 IP:     0 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 LD #0
+  DEBUG   machine:simulation    TICK:     1 IP:     1 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ST 13
+  DEBUG   machine:simulation    TICK:     2 IP:     2 ADDR:    13 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 CMP 0
+  DEBUG   machine:simulation    TICK:     3 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -12 ACC:     0 JE 12
+  DEBUG   machine:simulation    TICK:     4 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -12 ACC:     0 ADD #1
+  DEBUG   machine:simulation    TICK:     5 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     1 ACC:     1 ST 13
+  DEBUG   machine:simulation    TICK:     6 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     1 ACC:     1 ADD #0
+  DEBUG   machine:simulation    TICK:     7 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     1 ACC:     1 ST 14
+  DEBUG   machine:simulation    TICK:     8 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     1 ACC:     1 LD ~14
+  DEBUG   machine:simulation    TICK:    10 IP:     9 ADDR:     1 MEM_OUT:    72 ALU_OUT:    72 ACC:    72 OUT 0
+  DEBUG   machine:signal_output output: '' << 'H'
+  DEBUG   machine:simulation    TICK:    11 IP:    10 ADDR:     1 MEM_OUT:    72 ALU_OUT:    72 ACC:    72 LD 13
+  DEBUG   machine:simulation    TICK:    12 IP:    11 ADDR:    13 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 JMP 2
+  DEBUG   machine:simulation    TICK:    13 IP:     2 ADDR:    13 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP 0
+  DEBUG   machine:simulation    TICK:    14 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -11 ACC:     1 JE 12
+  DEBUG   machine:simulation    TICK:    15 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -11 ACC:     1 ADD #1
+  DEBUG   machine:simulation    TICK:    16 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     2 ACC:     2 ST 13
+  DEBUG   machine:simulation    TICK:    17 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     2 ACC:     2 ADD #0
+  DEBUG   machine:simulation    TICK:    18 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     2 ACC:     2 ST 14
+  DEBUG   machine:simulation    TICK:    19 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     2 ACC:     2 LD ~14
+  DEBUG   machine:simulation    TICK:    21 IP:     9 ADDR:     2 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 OUT 0
+  DEBUG   machine:signal_output output: 'H' << 'e'
+  DEBUG   machine:simulation    TICK:    22 IP:    10 ADDR:     2 MEM_OUT:   101 ALU_OUT:   101 ACC:   101 LD 13
+  DEBUG   machine:simulation    TICK:    23 IP:    11 ADDR:    13 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 JMP 2
+  DEBUG   machine:simulation    TICK:    24 IP:     2 ADDR:    13 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP 0
+  DEBUG   machine:simulation    TICK:    25 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -10 ACC:     2 JE 12
+  DEBUG   machine:simulation    TICK:    26 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:   -10 ACC:     2 ADD #1
+  DEBUG   machine:simulation    TICK:    27 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     3 ACC:     3 ST 13
+  DEBUG   machine:simulation    TICK:    28 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     3 ACC:     3 ADD #0
+  DEBUG   machine:simulation    TICK:    29 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     3 ACC:     3 ST 14
+  DEBUG   machine:simulation    TICK:    30 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     3 ACC:     3 LD ~14
+  DEBUG   machine:simulation    TICK:    32 IP:     9 ADDR:     3 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 OUT 0
+  DEBUG   machine:signal_output output: 'He' << 'l'
+  DEBUG   machine:simulation    TICK:    33 IP:    10 ADDR:     3 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 LD 13
+  DEBUG   machine:simulation    TICK:    34 IP:    11 ADDR:    13 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 JMP 2
+  DEBUG   machine:simulation    TICK:    35 IP:     2 ADDR:    13 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP 0
+  DEBUG   machine:simulation    TICK:    36 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -9 ACC:     3 JE 12
+  DEBUG   machine:simulation    TICK:    37 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -9 ACC:     3 ADD #1
+  DEBUG   machine:simulation    TICK:    38 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     4 ACC:     4 ST 13
+  DEBUG   machine:simulation    TICK:    39 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     4 ACC:     4 ADD #0
+  DEBUG   machine:simulation    TICK:    40 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     4 ACC:     4 ST 14
+  DEBUG   machine:simulation    TICK:    41 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     4 ACC:     4 LD ~14
+  DEBUG   machine:simulation    TICK:    43 IP:     9 ADDR:     4 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 OUT 0
+  DEBUG   machine:signal_output output: 'Hel' << 'l'
+  DEBUG   machine:simulation    TICK:    44 IP:    10 ADDR:     4 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 LD 13
+  DEBUG   machine:simulation    TICK:    45 IP:    11 ADDR:    13 MEM_OUT:     4 ALU_OUT:     4 ACC:     4 JMP 2
+  DEBUG   machine:simulation    TICK:    46 IP:     2 ADDR:    13 MEM_OUT:     4 ALU_OUT:     4 ACC:     4 CMP 0
+  DEBUG   machine:simulation    TICK:    47 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -8 ACC:     4 JE 12
+  DEBUG   machine:simulation    TICK:    48 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -8 ACC:     4 ADD #1
+  DEBUG   machine:simulation    TICK:    49 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     5 ACC:     5 ST 13
+  DEBUG   machine:simulation    TICK:    50 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     5 ACC:     5 ADD #0
+  DEBUG   machine:simulation    TICK:    51 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     5 ACC:     5 ST 14
+  DEBUG   machine:simulation    TICK:    52 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     5 ACC:     5 LD ~14
+  DEBUG   machine:simulation    TICK:    54 IP:     9 ADDR:     5 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 OUT 0
+  DEBUG   machine:signal_output output: 'Hell' << 'o'
+  DEBUG   machine:simulation    TICK:    55 IP:    10 ADDR:     5 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 LD 13
+  DEBUG   machine:simulation    TICK:    56 IP:    11 ADDR:    13 MEM_OUT:     5 ALU_OUT:     5 ACC:     5 JMP 2
+  DEBUG   machine:simulation    TICK:    57 IP:     2 ADDR:    13 MEM_OUT:     5 ALU_OUT:     5 ACC:     5 CMP 0
+  DEBUG   machine:simulation    TICK:    58 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -7 ACC:     5 JE 12
+  DEBUG   machine:simulation    TICK:    59 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -7 ACC:     5 ADD #1
+  DEBUG   machine:simulation    TICK:    60 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     6 ACC:     6 ST 13
+  DEBUG   machine:simulation    TICK:    61 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     6 ACC:     6 ADD #0
+  DEBUG   machine:simulation    TICK:    62 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     6 ACC:     6 ST 14
+  DEBUG   machine:simulation    TICK:    63 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     6 ACC:     6 LD ~14
+  DEBUG   machine:simulation    TICK:    65 IP:     9 ADDR:     6 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 OUT 0
+  DEBUG   machine:signal_output output: 'Hello' << ' '
+  DEBUG   machine:simulation    TICK:    66 IP:    10 ADDR:     6 MEM_OUT:    32 ALU_OUT:    32 ACC:    32 LD 13
+  DEBUG   machine:simulation    TICK:    67 IP:    11 ADDR:    13 MEM_OUT:     6 ALU_OUT:     6 ACC:     6 JMP 2
+  DEBUG   machine:simulation    TICK:    68 IP:     2 ADDR:    13 MEM_OUT:     6 ALU_OUT:     6 ACC:     6 CMP 0
+  DEBUG   machine:simulation    TICK:    69 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -6 ACC:     6 JE 12
+  DEBUG   machine:simulation    TICK:    70 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -6 ACC:     6 ADD #1
+  DEBUG   machine:simulation    TICK:    71 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     7 ACC:     7 ST 13
+  DEBUG   machine:simulation    TICK:    72 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     7 ACC:     7 ADD #0
+  DEBUG   machine:simulation    TICK:    73 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     7 ACC:     7 ST 14
+  DEBUG   machine:simulation    TICK:    74 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     7 ACC:     7 LD ~14
+  DEBUG   machine:simulation    TICK:    76 IP:     9 ADDR:     7 MEM_OUT:   119 ALU_OUT:   119 ACC:   119 OUT 0
+  DEBUG   machine:signal_output output: 'Hello ' << 'w'
+  DEBUG   machine:simulation    TICK:    77 IP:    10 ADDR:     7 MEM_OUT:   119 ALU_OUT:   119 ACC:   119 LD 13
+  DEBUG   machine:simulation    TICK:    78 IP:    11 ADDR:    13 MEM_OUT:     7 ALU_OUT:     7 ACC:     7 JMP 2
+  DEBUG   machine:simulation    TICK:    79 IP:     2 ADDR:    13 MEM_OUT:     7 ALU_OUT:     7 ACC:     7 CMP 0
+  DEBUG   machine:simulation    TICK:    80 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -5 ACC:     7 JE 12
+  DEBUG   machine:simulation    TICK:    81 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -5 ACC:     7 ADD #1
+  DEBUG   machine:simulation    TICK:    82 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     8 ACC:     8 ST 13
+  DEBUG   machine:simulation    TICK:    83 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     8 ACC:     8 ADD #0
+  DEBUG   machine:simulation    TICK:    84 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     8 ACC:     8 ST 14
+  DEBUG   machine:simulation    TICK:    85 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     8 ACC:     8 LD ~14
+  DEBUG   machine:simulation    TICK:    87 IP:     9 ADDR:     8 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 OUT 0
+  DEBUG   machine:signal_output output: 'Hello w' << 'o'
+  DEBUG   machine:simulation    TICK:    88 IP:    10 ADDR:     8 MEM_OUT:   111 ALU_OUT:   111 ACC:   111 LD 13
+  DEBUG   machine:simulation    TICK:    89 IP:    11 ADDR:    13 MEM_OUT:     8 ALU_OUT:     8 ACC:     8 JMP 2
+  DEBUG   machine:simulation    TICK:    90 IP:     2 ADDR:    13 MEM_OUT:     8 ALU_OUT:     8 ACC:     8 CMP 0
+  DEBUG   machine:simulation    TICK:    91 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -4 ACC:     8 JE 12
+  DEBUG   machine:simulation    TICK:    92 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -4 ACC:     8 ADD #1
+  DEBUG   machine:simulation    TICK:    93 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:     9 ACC:     9 ST 13
+  DEBUG   machine:simulation    TICK:    94 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:     9 ACC:     9 ADD #0
+  DEBUG   machine:simulation    TICK:    95 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:     9 ACC:     9 ST 14
+  DEBUG   machine:simulation    TICK:    96 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:     9 ACC:     9 LD ~14
+  DEBUG   machine:simulation    TICK:    98 IP:     9 ADDR:     9 MEM_OUT:   114 ALU_OUT:   114 ACC:   114 OUT 0
+  DEBUG   machine:signal_output output: 'Hello wo' << 'r'
+  DEBUG   machine:simulation    TICK:    99 IP:    10 ADDR:     9 MEM_OUT:   114 ALU_OUT:   114 ACC:   114 LD 13
+  DEBUG   machine:simulation    TICK:   100 IP:    11 ADDR:    13 MEM_OUT:     9 ALU_OUT:     9 ACC:     9 JMP 2
+  DEBUG   machine:simulation    TICK:   101 IP:     2 ADDR:    13 MEM_OUT:     9 ALU_OUT:     9 ACC:     9 CMP 0
+  DEBUG   machine:simulation    TICK:   102 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -3 ACC:     9 JE 12
+  DEBUG   machine:simulation    TICK:   103 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -3 ACC:     9 ADD #1
+  DEBUG   machine:simulation    TICK:   104 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:    10 ACC:    10 ST 13
+  DEBUG   machine:simulation    TICK:   105 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:    10 ACC:    10 ADD #0
+  DEBUG   machine:simulation    TICK:   106 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:    10 ACC:    10 ST 14
+  DEBUG   machine:simulation    TICK:   107 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:    10 ACC:    10 LD ~14
+  DEBUG   machine:simulation    TICK:   109 IP:     9 ADDR:    10 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 OUT 0
+  DEBUG   machine:signal_output output: 'Hello wor' << 'l'
+  DEBUG   machine:simulation    TICK:   110 IP:    10 ADDR:    10 MEM_OUT:   108 ALU_OUT:   108 ACC:   108 LD 13
+  DEBUG   machine:simulation    TICK:   111 IP:    11 ADDR:    13 MEM_OUT:    10 ALU_OUT:    10 ACC:    10 JMP 2
+  DEBUG   machine:simulation    TICK:   112 IP:     2 ADDR:    13 MEM_OUT:    10 ALU_OUT:    10 ACC:    10 CMP 0
+  DEBUG   machine:simulation    TICK:   113 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -2 ACC:    10 JE 12
+  DEBUG   machine:simulation    TICK:   114 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -2 ACC:    10 ADD #1
+  DEBUG   machine:simulation    TICK:   115 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:    11 ACC:    11 ST 13
+  DEBUG   machine:simulation    TICK:   116 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:    11 ACC:    11 ADD #0
+  DEBUG   machine:simulation    TICK:   117 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:    11 ACC:    11 ST 14
+  DEBUG   machine:simulation    TICK:   118 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:    11 ACC:    11 LD ~14
+  DEBUG   machine:simulation    TICK:   120 IP:     9 ADDR:    11 MEM_OUT:   100 ALU_OUT:   100 ACC:   100 OUT 0
+  DEBUG   machine:signal_output output: 'Hello worl' << 'd'
+  DEBUG   machine:simulation    TICK:   121 IP:    10 ADDR:    11 MEM_OUT:   100 ALU_OUT:   100 ACC:   100 LD 13
+  DEBUG   machine:simulation    TICK:   122 IP:    11 ADDR:    13 MEM_OUT:    11 ALU_OUT:    11 ACC:    11 JMP 2
+  DEBUG   machine:simulation    TICK:   123 IP:     2 ADDR:    13 MEM_OUT:    11 ALU_OUT:    11 ACC:    11 CMP 0
+  DEBUG   machine:simulation    TICK:   124 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -1 ACC:    11 JE 12
+  DEBUG   machine:simulation    TICK:   125 IP:     4 ADDR:     0 MEM_OUT:    12 ALU_OUT:    -1 ACC:    11 ADD #1
+  DEBUG   machine:simulation    TICK:   126 IP:     5 ADDR:     0 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 ST 13
+  DEBUG   machine:simulation    TICK:   127 IP:     6 ADDR:    13 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 ADD #0
+  DEBUG   machine:simulation    TICK:   128 IP:     7 ADDR:    13 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 ST 14
+  DEBUG   machine:simulation    TICK:   129 IP:     8 ADDR:    14 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 LD ~14
+  DEBUG   machine:simulation    TICK:   131 IP:     9 ADDR:    12 MEM_OUT:    33 ALU_OUT:    33 ACC:    33 OUT 0
+  DEBUG   machine:signal_output output: 'Hello world' << '!'
+  DEBUG   machine:simulation    TICK:   132 IP:    10 ADDR:    12 MEM_OUT:    33 ALU_OUT:    33 ACC:    33 LD 13
+  DEBUG   machine:simulation    TICK:   133 IP:    11 ADDR:    13 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 JMP 2
+  DEBUG   machine:simulation    TICK:   134 IP:     2 ADDR:    13 MEM_OUT:    12 ALU_OUT:    12 ACC:    12 CMP 0
+  DEBUG   machine:simulation    TICK:   135 IP:     3 ADDR:     0 MEM_OUT:    12 ALU_OUT:     0 ACC:    12 JE 12
+  DEBUG   machine:simulation    TICK:   136 IP:    12 ADDR:     0 MEM_OUT:    12 ALU_OUT:     0 ACC:    12 HLT
+  INFO    machine:simulation    output_buffer: 'Hello world!'
+

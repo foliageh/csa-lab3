@@ -1,0 +1,5 @@
+*.out
+.coverage
+__pycache__
+.idea/
+help.txt
