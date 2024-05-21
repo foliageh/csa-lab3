@@ -178,7 +178,7 @@
 Реализовано в модуле [machine](comp-architecture-lab3/machine/machine.py).
 
 ### ControlUnit
-![схема ControlUnit](schemes/ControlUnit.png)
+<img src="schemes/ControlUnit.png" alt="схема ControlUnit" width="600"/>
 
 - Hardwired (реализовано полностью на Python).
 - Метод `decode_and_execute_instruction` моделирует выполнение полного цикла инструкции.
