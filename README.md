@@ -311,103 +311,103 @@ $ poetry run python -m machine.machine cat63.out cat63.input
 DEBUG:root:TICK:     0 IP:     0 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 LD #0
 DEBUG:root:TICK:     1 IP:     1 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ST 1
 DEBUG:root:TICK:     2 IP:     2 ADDR:     1 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 CMP 0
-DEBUG:root:TICK:     3 IP:     3 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 JE 17
-DEBUG:root:TICK:     4 IP:    17 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 LD #0
-DEBUG:root:TICK:     5 IP:    18 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ST 1
-DEBUG:root:TICK:     6 IP:    19 ADDR:     1 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 IN 0
+DEBUG:root:TICK:     4 IP:     3 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 JE 17
+DEBUG:root:TICK:     5 IP:    17 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 LD #0
+DEBUG:root:TICK:     6 IP:    18 ADDR:     0 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ST 1
+DEBUG:root:TICK:     7 IP:    19 ADDR:     1 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 IN 0
 DEBUG:root:input: 'м'
-DEBUG:root:TICK:     7 IP:    20 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 CMP #0
-DEBUG:root:TICK:     8 IP:    21 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 JE 34
-DEBUG:root:TICK:     9 IP:    22 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 ST 65
-DEBUG:root:TICK:    10 IP:    23 ADDR:    65 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 LD 1
-DEBUG:root:TICK:    11 IP:    24 ADDR:     1 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ADD #1
-DEBUG:root:TICK:    12 IP:    25 ADDR:     1 MEM_OUT:     0 ALU_OUT:     1 ACC:     1 ST 1
-DEBUG:root:TICK:    13 IP:    26 ADDR:     1 MEM_OUT:     0 ALU_OUT:     1 ACC:     1 ADD #1
-DEBUG:root:TICK:    14 IP:    27 ADDR:     1 MEM_OUT:     0 ALU_OUT:     2 ACC:     2 ST 66
-DEBUG:root:TICK:    15 IP:    28 ADDR:    66 MEM_OUT:     0 ALU_OUT:     2 ACC:     2 LD 65
-DEBUG:root:TICK:    16 IP:    29 ADDR:    65 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 ST ~66
-DEBUG:root:TICK:    18 IP:    30 ADDR:     2 MEM_OUT:     2 ALU_OUT:  1084 ACC:  1084 LD 1
-DEBUG:root:TICK:    19 IP:    31 ADDR:     1 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP #63
-DEBUG:root:TICK:    20 IP:    32 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 JE 34
-DEBUG:root:TICK:    21 IP:    33 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 JMP 19
-DEBUG:root:TICK:    22 IP:    19 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 IN 0
+DEBUG:root:TICK:     8 IP:    20 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 CMP #0
+DEBUG:root:TICK:     9 IP:    21 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 JE 34
+DEBUG:root:TICK:    10 IP:    22 ADDR:     1 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 ST 65
+DEBUG:root:TICK:    11 IP:    23 ADDR:    65 MEM_OUT:     0 ALU_OUT:  1084 ACC:  1084 LD 1
+DEBUG:root:TICK:    13 IP:    24 ADDR:     1 MEM_OUT:     0 ALU_OUT:     0 ACC:     0 ADD #1
+DEBUG:root:TICK:    14 IP:    25 ADDR:     1 MEM_OUT:     0 ALU_OUT:     1 ACC:     1 ST 1
+DEBUG:root:TICK:    15 IP:    26 ADDR:     1 MEM_OUT:     0 ALU_OUT:     1 ACC:     1 ADD #1
+DEBUG:root:TICK:    16 IP:    27 ADDR:     1 MEM_OUT:     0 ALU_OUT:     2 ACC:     2 ST 66
+DEBUG:root:TICK:    17 IP:    28 ADDR:    66 MEM_OUT:     0 ALU_OUT:     2 ACC:     2 LD 65
+DEBUG:root:TICK:    19 IP:    29 ADDR:    65 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 ST ~66
+DEBUG:root:TICK:    22 IP:    30 ADDR:     2 MEM_OUT:     2 ALU_OUT:  1084 ACC:  1084 LD 1
+DEBUG:root:TICK:    24 IP:    31 ADDR:     1 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP #63
+DEBUG:root:TICK:    25 IP:    32 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 JE 34
+DEBUG:root:TICK:    26 IP:    33 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 JMP 19
+DEBUG:root:TICK:    27 IP:    19 ADDR:     1 MEM_OUT:     1 ALU_OUT:   -62 ACC:     1 IN 0
 DEBUG:root:input: 'я'
-DEBUG:root:TICK:    23 IP:    20 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 CMP #0
-DEBUG:root:TICK:    24 IP:    21 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 JE 34
-DEBUG:root:TICK:    25 IP:    22 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 ST 65
-DEBUG:root:TICK:    26 IP:    23 ADDR:    65 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 LD 1
-DEBUG:root:TICK:    27 IP:    24 ADDR:     1 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 ADD #1
-DEBUG:root:TICK:    28 IP:    25 ADDR:     1 MEM_OUT:     1 ALU_OUT:     2 ACC:     2 ST 1
-DEBUG:root:TICK:    29 IP:    26 ADDR:     1 MEM_OUT:     1 ALU_OUT:     2 ACC:     2 ADD #1
-DEBUG:root:TICK:    30 IP:    27 ADDR:     1 MEM_OUT:     1 ALU_OUT:     3 ACC:     3 ST 66
-DEBUG:root:TICK:    31 IP:    28 ADDR:    66 MEM_OUT:     1 ALU_OUT:     3 ACC:     3 LD 65
-DEBUG:root:TICK:    32 IP:    29 ADDR:    65 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 ST ~66
-DEBUG:root:TICK:    34 IP:    30 ADDR:     3 MEM_OUT:     3 ALU_OUT:  1103 ACC:  1103 LD 1
-DEBUG:root:TICK:    35 IP:    31 ADDR:     1 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP #63
-DEBUG:root:TICK:    36 IP:    32 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 JE 34
-DEBUG:root:TICK:    37 IP:    33 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 JMP 19
-DEBUG:root:TICK:    38 IP:    19 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 IN 0
+DEBUG:root:TICK:    28 IP:    20 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 CMP #0
+DEBUG:root:TICK:    29 IP:    21 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 JE 34
+DEBUG:root:TICK:    30 IP:    22 ADDR:     1 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 ST 65
+DEBUG:root:TICK:    31 IP:    23 ADDR:    65 MEM_OUT:     1 ALU_OUT:  1103 ACC:  1103 LD 1
+DEBUG:root:TICK:    33 IP:    24 ADDR:     1 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 ADD #1
+DEBUG:root:TICK:    34 IP:    25 ADDR:     1 MEM_OUT:     1 ALU_OUT:     2 ACC:     2 ST 1
+DEBUG:root:TICK:    35 IP:    26 ADDR:     1 MEM_OUT:     1 ALU_OUT:     2 ACC:     2 ADD #1
+DEBUG:root:TICK:    36 IP:    27 ADDR:     1 MEM_OUT:     1 ALU_OUT:     3 ACC:     3 ST 66
+DEBUG:root:TICK:    37 IP:    28 ADDR:    66 MEM_OUT:     1 ALU_OUT:     3 ACC:     3 LD 65
+DEBUG:root:TICK:    39 IP:    29 ADDR:    65 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 ST ~66
+DEBUG:root:TICK:    42 IP:    30 ADDR:     3 MEM_OUT:     3 ALU_OUT:  1103 ACC:  1103 LD 1
+DEBUG:root:TICK:    44 IP:    31 ADDR:     1 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP #63
+DEBUG:root:TICK:    45 IP:    32 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 JE 34
+DEBUG:root:TICK:    46 IP:    33 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 JMP 19
+DEBUG:root:TICK:    47 IP:    19 ADDR:     1 MEM_OUT:     2 ALU_OUT:   -61 ACC:     2 IN 0
 DEBUG:root:input: 'y'
-DEBUG:root:TICK:    39 IP:    20 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 CMP #0
-DEBUG:root:TICK:    40 IP:    21 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 JE 34
-DEBUG:root:TICK:    41 IP:    22 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 ST 65
-DEBUG:root:TICK:    42 IP:    23 ADDR:    65 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 LD 1
-DEBUG:root:TICK:    43 IP:    24 ADDR:     1 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 ADD #1
-DEBUG:root:TICK:    44 IP:    25 ADDR:     1 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 ST 1
-DEBUG:root:TICK:    45 IP:    26 ADDR:     1 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 ADD #1
-DEBUG:root:TICK:    46 IP:    27 ADDR:     1 MEM_OUT:     2 ALU_OUT:     4 ACC:     4 ST 66
-DEBUG:root:TICK:    47 IP:    28 ADDR:    66 MEM_OUT:     2 ALU_OUT:     4 ACC:     4 LD 65
-DEBUG:root:TICK:    48 IP:    29 ADDR:    65 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 ST ~66
-DEBUG:root:TICK:    50 IP:    30 ADDR:     4 MEM_OUT:     4 ALU_OUT:   121 ACC:   121 LD 1
-DEBUG:root:TICK:    51 IP:    31 ADDR:     1 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP #63
-DEBUG:root:TICK:    52 IP:    32 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 JE 34
-DEBUG:root:TICK:    53 IP:    33 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 JMP 19
-DEBUG:root:TICK:    54 IP:    19 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 IN 0
+DEBUG:root:TICK:    48 IP:    20 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 CMP #0
+DEBUG:root:TICK:    49 IP:    21 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 JE 34
+DEBUG:root:TICK:    50 IP:    22 ADDR:     1 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 ST 65
+DEBUG:root:TICK:    51 IP:    23 ADDR:    65 MEM_OUT:     2 ALU_OUT:   121 ACC:   121 LD 1
+DEBUG:root:TICK:    53 IP:    24 ADDR:     1 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 ADD #1
+DEBUG:root:TICK:    54 IP:    25 ADDR:     1 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 ST 1
+DEBUG:root:TICK:    55 IP:    26 ADDR:     1 MEM_OUT:     2 ALU_OUT:     3 ACC:     3 ADD #1
+DEBUG:root:TICK:    56 IP:    27 ADDR:     1 MEM_OUT:     2 ALU_OUT:     4 ACC:     4 ST 66
+DEBUG:root:TICK:    57 IP:    28 ADDR:    66 MEM_OUT:     2 ALU_OUT:     4 ACC:     4 LD 65
+DEBUG:root:TICK:    59 IP:    29 ADDR:    65 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 ST ~66
+DEBUG:root:TICK:    62 IP:    30 ADDR:     4 MEM_OUT:     4 ALU_OUT:   121 ACC:   121 LD 1
+DEBUG:root:TICK:    64 IP:    31 ADDR:     1 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP #63
+DEBUG:root:TICK:    65 IP:    32 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 JE 34
+DEBUG:root:TICK:    66 IP:    33 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 JMP 19
+DEBUG:root:TICK:    67 IP:    19 ADDR:     1 MEM_OUT:     3 ALU_OUT:   -60 ACC:     3 IN 0
 DEBUG:root:input: '\x00'
-DEBUG:root:TICK:    55 IP:    20 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 CMP #0
-DEBUG:root:TICK:    56 IP:    21 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 JE 34
-DEBUG:root:TICK:    57 IP:    34 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 LD #0
-DEBUG:root:TICK:    58 IP:    35 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 ST 65
-DEBUG:root:TICK:    59 IP:    36 ADDR:    65 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 CMP 1
-DEBUG:root:TICK:    60 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -3 ACC:     0 JE 46
-DEBUG:root:TICK:    61 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -3 ACC:     0 ADD #1
-DEBUG:root:TICK:    62 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     1 ACC:     1 ST 65
-DEBUG:root:TICK:    63 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     1 ACC:     1 ADD #1
-DEBUG:root:TICK:    64 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ST 66
-DEBUG:root:TICK:    65 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 LD ~66
-DEBUG:root:TICK:    67 IP:    43 ADDR:     2 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 OUT 0
+DEBUG:root:TICK:    68 IP:    20 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 CMP #0
+DEBUG:root:TICK:    69 IP:    21 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 JE 34
+DEBUG:root:TICK:    70 IP:    34 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 LD #0
+DEBUG:root:TICK:    71 IP:    35 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 ST 65
+DEBUG:root:TICK:    72 IP:    36 ADDR:    65 MEM_OUT:     3 ALU_OUT:     0 ACC:     0 CMP 1
+DEBUG:root:TICK:    74 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -3 ACC:     0 JE 46
+DEBUG:root:TICK:    75 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -3 ACC:     0 ADD #1
+DEBUG:root:TICK:    76 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     1 ACC:     1 ST 65
+DEBUG:root:TICK:    77 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     1 ACC:     1 ADD #1
+DEBUG:root:TICK:    78 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ST 66
+DEBUG:root:TICK:    79 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 LD ~66
+DEBUG:root:TICK:    82 IP:    43 ADDR:     2 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 OUT 0
 DEBUG:root:output: '' << 'м'
-DEBUG:root:TICK:    68 IP:    44 ADDR:     2 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 LD 65
-DEBUG:root:TICK:    69 IP:    45 ADDR:    65 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 JMP 36
-DEBUG:root:TICK:    70 IP:    36 ADDR:    65 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP 1
-DEBUG:root:TICK:    71 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -2 ACC:     1 JE 46
-DEBUG:root:TICK:    72 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -2 ACC:     1 ADD #1
-DEBUG:root:TICK:    73 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ST 65
-DEBUG:root:TICK:    74 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ADD #1
-DEBUG:root:TICK:    75 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ST 66
-DEBUG:root:TICK:    76 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 LD ~66
-DEBUG:root:TICK:    78 IP:    43 ADDR:     3 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 OUT 0
+DEBUG:root:TICK:    83 IP:    44 ADDR:     2 MEM_OUT:  1084 ALU_OUT:  1084 ACC:  1084 LD 65
+DEBUG:root:TICK:    85 IP:    45 ADDR:    65 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 JMP 36
+DEBUG:root:TICK:    86 IP:    36 ADDR:    65 MEM_OUT:     1 ALU_OUT:     1 ACC:     1 CMP 1
+DEBUG:root:TICK:    88 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -2 ACC:     1 JE 46
+DEBUG:root:TICK:    89 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -2 ACC:     1 ADD #1
+DEBUG:root:TICK:    90 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ST 65
+DEBUG:root:TICK:    91 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     2 ACC:     2 ADD #1
+DEBUG:root:TICK:    92 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ST 66
+DEBUG:root:TICK:    93 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 LD ~66
+DEBUG:root:TICK:    96 IP:    43 ADDR:     3 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 OUT 0
 DEBUG:root:output: 'м' << 'я'
-DEBUG:root:TICK:    79 IP:    44 ADDR:     3 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 LD 65
-DEBUG:root:TICK:    80 IP:    45 ADDR:    65 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 JMP 36
-DEBUG:root:TICK:    81 IP:    36 ADDR:    65 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP 1
-DEBUG:root:TICK:    82 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -1 ACC:     2 JE 46
-DEBUG:root:TICK:    83 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -1 ACC:     2 ADD #1
-DEBUG:root:TICK:    84 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ST 65
-DEBUG:root:TICK:    85 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ADD #1
-DEBUG:root:TICK:    86 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     4 ACC:     4 ST 66
-DEBUG:root:TICK:    87 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     4 ACC:     4 LD ~66
-DEBUG:root:TICK:    89 IP:    43 ADDR:     4 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 OUT 0
+DEBUG:root:TICK:    97 IP:    44 ADDR:     3 MEM_OUT:  1103 ALU_OUT:  1103 ACC:  1103 LD 65
+DEBUG:root:TICK:    99 IP:    45 ADDR:    65 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 JMP 36
+DEBUG:root:TICK:   100 IP:    36 ADDR:    65 MEM_OUT:     2 ALU_OUT:     2 ACC:     2 CMP 1
+DEBUG:root:TICK:   102 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -1 ACC:     2 JE 46
+DEBUG:root:TICK:   103 IP:    38 ADDR:     1 MEM_OUT:     3 ALU_OUT:    -1 ACC:     2 ADD #1
+DEBUG:root:TICK:   104 IP:    39 ADDR:     1 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ST 65
+DEBUG:root:TICK:   105 IP:    40 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 ADD #1
+DEBUG:root:TICK:   106 IP:    41 ADDR:    65 MEM_OUT:     3 ALU_OUT:     4 ACC:     4 ST 66
+DEBUG:root:TICK:   107 IP:    42 ADDR:    66 MEM_OUT:     3 ALU_OUT:     4 ACC:     4 LD ~66
+DEBUG:root:TICK:   110 IP:    43 ADDR:     4 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 OUT 0
 DEBUG:root:output: 'мя' << 'y'
-DEBUG:root:TICK:    90 IP:    44 ADDR:     4 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 LD 65
-DEBUG:root:TICK:    91 IP:    45 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 JMP 36
-DEBUG:root:TICK:    92 IP:    36 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP 1
-DEBUG:root:TICK:    93 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     3 JE 46
-DEBUG:root:TICK:    94 IP:    46 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     3 HLT
+DEBUG:root:TICK:   111 IP:    44 ADDR:     4 MEM_OUT:   121 ALU_OUT:   121 ACC:   121 LD 65
+DEBUG:root:TICK:   113 IP:    45 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 JMP 36
+DEBUG:root:TICK:   114 IP:    36 ADDR:    65 MEM_OUT:     3 ALU_OUT:     3 ACC:     3 CMP 1
+DEBUG:root:TICK:   116 IP:    37 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     3 JE 46
+DEBUG:root:TICK:   117 IP:    46 ADDR:     1 MEM_OUT:     3 ALU_OUT:     0 ACC:     3 HLT
 INFO:root:output_buffer: 'мяy'
 output: 'мяy'
 instr executed: 88
-ticks: 94
+ticks: 117
 ```
 
 Пример проверки исходного кода:
@@ -435,9 +435,9 @@ $ poetry run ruff format
 ```
 
 ## Статистика
-| ФИО                          | алг             | LoC | code байт | code инстр. | инстр. | такт.  |
-|------------------------------|-----------------|-----|-----------|-------------|--------|--------|
-| Муратов Михаил Александрович | hello           | 1   | 65        | 13          | 124    | 136    |
-| Муратов Михаил Александрович | cat             | 5   | 260       | 52          | 1954   | 2110   |
-| Муратов Михаил Александрович | hello_user_name | 6   | 415       | 83          | 445    | 484    |
-| Муратов Михаил Александрович | prob1           | 9   | 385       | 77          | 55300  | 55300  |
+| ФИО                          | алг             | LoC | code байт | code инстр. | инстр. | такт. |
+|------------------------------|-----------------|-----|-----------|-------------|--------|-------|
+| Муратов Михаил Александрович | hello           | 1   | 65        | 13          | 124    | 173   |
+| Муратов Михаил Александрович | cat             | 5   | 260       | 52          | 1954   | 2659  |
+| Муратов Михаил Александрович | hello_user_name | 6   | 415       | 83          | 445    | 612   |
+| Муратов Михаил Александрович | prob1           | 9   | 385       | 77          | 55300  | 68958 |

@@ -137,41 +137,40 @@ class ControlUnit:
             else:
                 self.data_path.signal_latch_address(sel_instr=True, value=instr.argument)
                 self.data_path.signal_read()
+                self.tick()
                 self.data_path.alu_work(sel_instr=False, mode=ALUMode.BINARY, operation=instr.opcode)
             if instr.opcode is not Opcode.CMP:
                 self.data_path.signal_latch_acc(sel_input=False)
-            self.tick()
         elif instr.opcode is Opcode.LD:
             if instr.addressing_mode is AddressingMode.IMMEDIATE:
                 self.data_path.alu_work(sel_instr=True, mode=ALUMode.UNARY_RIGHT, right=instr.argument)
             else:
                 self.data_path.signal_latch_address(sel_instr=True, value=instr.argument)
                 self.data_path.signal_read()
+                self.tick()
                 self.data_path.alu_work(sel_instr=False, mode=ALUMode.UNARY_RIGHT)
                 if instr.addressing_mode is AddressingMode.INDIRECT:
                     self.data_path.signal_latch_address(sel_instr=False)
-                    self.tick()
                     self.data_path.signal_read()
+                    self.tick()
                     self.data_path.alu_work(sel_instr=False, mode=ALUMode.UNARY_RIGHT)
             self.data_path.signal_latch_acc(sel_input=False)
-            self.tick()
         elif instr.opcode is Opcode.ST:
             self.data_path.signal_latch_address(sel_instr=True, value=instr.argument)
             if instr.addressing_mode is AddressingMode.INDIRECT:
                 self.data_path.signal_read()
+                self.tick()
                 self.data_path.alu_work(sel_instr=False, mode=ALUMode.UNARY_RIGHT)
                 self.data_path.signal_latch_address(sel_instr=False)
                 self.tick()
             self.data_path.alu_work(sel_instr=False, mode=ALUMode.UNARY_LEFT)
             self.data_path.signal_write()
-            self.tick()
         elif instr.opcode is Opcode.IN:
             self.data_path.signal_latch_acc(sel_input=True)
             self.data_path.alu_work(sel_instr=False, mode=ALUMode.UNARY_LEFT)  # set flags
-            self.tick()
         elif instr.opcode in {Opcode.OUT, Opcode.OUTN}:
             self.data_path.signal_output(is_number=instr.opcode == Opcode.OUTN)
-            self.tick()
+        self.tick()
         self.signal_latch_instr_pointer(sel_next=True)
 
     def __repr__(self):
